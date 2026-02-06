@@ -1,0 +1,2 @@
+# sqlatte-docs
+SQLatte Documentation
