@@ -1,0 +1,3 @@
+# Barista
+
+Documentation coming soon.
