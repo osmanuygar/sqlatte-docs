@@ -24,9 +24,11 @@ The standard widget provides a simple chat interface with backend-configured dat
 #### Badge Button
 
 ![Standard Widget Badge](../assets/images/ui/standard-widget-badge.png)
+
 *The coffee cup badge that opens the SQLatte widget (bottom-right by default)*
 
 **Features:**
+
 - Customizable position (bottom-left, bottom-right, top-left, top-right)
 - Responsive design
 - Hover state with tooltip
@@ -41,12 +43,14 @@ The standard widget provides a simple chat interface with backend-configured dat
 **Key Components:**
 
 1. **Header Bar**
+
    - SQLatte logo and title
    - Minimize/maximize controls
    - Close button
    - Table selector dropdown
 
 2. **Chat Area**
+
    - Message history with conversation context
    - User questions in blue bubbles
    - SQLatte responses with SQL code blocks
@@ -54,12 +58,14 @@ The standard widget provides a simple chat interface with backend-configured dat
    - Copy SQL button
 
 3. **Input Section**
+
    - Multi-line textarea
    - Send button
    - Placeholder text with examples
    - Enter to send (Shift+Enter for new line)
 
 4. **Toolbar**
+
    - History icon (view past queries)
    - Favorites icon (saved queries)
    - Chart icon (visualize results)
@@ -73,6 +79,7 @@ The standard widget provides a simple chat interface with backend-configured dat
 *SQL results displayed in a formatted table*
 
 **Result Table Features:**
+
 - Column headers with sorting
 - Responsive scrolling for large datasets
 - Row highlighting on hover
@@ -85,6 +92,7 @@ The standard widget provides a simple chat interface with backend-configured dat
 *Syntax-highlighted SQL with copy button*
 
 **Code Block Features:**
+
 - Syntax highlighting (keywords, strings, numbers)
 - Line numbers
 - Copy to clipboard button
@@ -94,9 +102,11 @@ The standard widget provides a simple chat interface with backend-configured dat
 #### Chart Visualization
 
 ![Chart Modal](assets/images/ui/modal_chart.png)
+
 *Interactive chart generated from query results*
 
 **Chart Features:**
+
 - Chart type selector (bar, line, pie, doughnut)
 - Metric selector for multi-column data
 - Responsive canvas
@@ -110,6 +120,7 @@ The standard widget provides a simple chat interface with backend-configured dat
 *Slide-out panel showing query history*
 
 **History Panel Features:**
+
 - Chronological list of queries
 - Question text preview
 - Timestamp
@@ -125,6 +136,7 @@ The standard widget provides a simple chat interface with backend-configured dat
 *Saved queries for quick access*
 
 **Favorites Features:**
+
 - Saved query list
 - Custom labels/names
 - Quick re-run
@@ -145,6 +157,7 @@ Multi-tenant widget with user authentication and per-user database connections.
 *Login form for authenticated access*
 
 **Login Form Fields:**
+
 - Username
 - Password
 - Database Type (if multiple allowed)
@@ -153,6 +166,7 @@ Multi-tenant widget with user authentication and per-user database connections.
 - Database info footer
 
 **Security Features:**
+
 - Session-based authentication
 - Credential isolation per user
 - Configurable session TTL
@@ -165,6 +179,7 @@ Multi-tenant widget with user authentication and per-user database connections.
 *Chat interface after successful login*
 
 **Differences from Standard Widget:**
+
 - User indicator in header
 - Logout button
 - Session status indicator
@@ -175,6 +190,7 @@ Multi-tenant widget with user authentication and per-user database connections.
 
 
 **Session Features:**
+
 - Active session indicator
 - Time remaining display
 - Logout button
@@ -192,6 +208,7 @@ The full-featured web application for comprehensive SQLatte access.
 *Landing page with quick links and overview*
 
 **Home Page Components:**
+
 - Welcome message
 - Recent activity summary
 - Quick action buttons
@@ -201,6 +218,7 @@ The full-featured web application for comprehensive SQLatte access.
 ### Assistant Tab
 
 **Features:**
+
 - Full standard widget functionality
 - Integrated within dashboard layout
 - Sidebar navigation visible
@@ -211,6 +229,7 @@ The full-featured web application for comprehensive SQLatte access.
 *Interactive demo and examples*
 
 **Demo Page Elements:**
+
 - Sample queries you can try
 - Pre-configured example database
 - Tutorial walkthrough
@@ -225,18 +244,21 @@ The full-featured web application for comprehensive SQLatte access.
 **Analytics Dashboard Sections:**
 
 1. **Overview Cards**
+
    - Total queries executed
    - Average execution time
    - Success rate percentage
    - Active users count
 
 2. **Query Performance Chart**
+
    - Execution time trends
    - Query volume over time
    - Success/failure ratio
    - Filtering by time range
 
 3. **Top Queries Table**
+
    - Most frequently run queries
    - Average execution time
    - Success rate
@@ -260,6 +282,7 @@ The full-featured web application for comprehensive SQLatte access.
 **Schedule Management Features:**
 
 1. **Schedule List**
+
    - All active and inactive schedules
    - Frequency (daily, weekly, monthly)
    - Next run time
@@ -277,6 +300,7 @@ The full-featured web application for comprehensive SQLatte access.
    - Custom email subject/body
 
 3. **Execution History**
+
    - Past execution logs
    - Success/failure status
    - Rows returned
@@ -285,6 +309,7 @@ The full-featured web application for comprehensive SQLatte access.
    - Email delivery status
 
 4. **Email Preview**
+
    - Preview email template
    - Test send to your email
    - Attachment format preview
@@ -296,6 +321,7 @@ The full-featured web application for comprehensive SQLatte access.
 *Admin panel embedded in dashboard*
 
 **Configuration Sections:**
+
 - Full admin panel functionality
 - Provider settings
 - Prompts editor
@@ -315,6 +341,7 @@ Dedicated administration interface for configuration and management.
 *Admin panel landing page*
 
 **Navigation Tabs:**
+
 - Providers
 - Prompts
 - Email & SMTP
@@ -330,6 +357,7 @@ Dedicated administration interface for configuration and management.
 *LLM and database provider configuration*
 
 **LLM Provider Section:**
+
 - Provider selector dropdown (Anthropic, Gemini, Vertex AI)
 - Model selector
 - API key input (masked)
@@ -339,6 +367,7 @@ Dedicated administration interface for configuration and management.
 - Save button
 
 **Database Provider Section:**
+
 - Provider selector (Trino, PostgreSQL, MySQL, BigQuery)
 - Host, port, database inputs
 - Username, password fields
@@ -347,6 +376,7 @@ Dedicated administration interface for configuration and management.
 - Connection status indicator
 
 **System Info Box:**
+
 - Current LLM provider and model
 - Current database provider
 - Runtime overrides status
@@ -360,12 +390,14 @@ Dedicated administration interface for configuration and management.
 **Prompt Editor Features:**
 
 1. **Prompt Selector**
+
    - Intent Detection
    - Barista Personality
    - SQL Generation
    - Insights Generation
 
 2. **Editor Area**
+
    - Multi-line textarea
    - Syntax highlighting
    - Template variable hints
@@ -373,12 +405,14 @@ Dedicated administration interface for configuration and management.
    - Line numbers
 
 3. **Action Buttons**
+
    - Save prompt (to database)
    - Reset to default
    - Preview with sample
    - Copy to clipboard
 
 4. **Template Variables Helper**
+
    - Available variables list
    - Click to insert
    - Usage examples
@@ -390,6 +424,7 @@ Dedicated administration interface for configuration and management.
 *Email service configuration*
 
 **Email Configuration:**
+
 - Enable/disable toggle
 - SMTP provider dropdown
 - SMTP host
@@ -403,6 +438,7 @@ Dedicated administration interface for configuration and management.
 - Save configuration
 
 **Email Test Result:**
+
 - Success/failure message
 - SMTP connection log
 - Delivery confirmation
@@ -413,6 +449,7 @@ Dedicated administration interface for configuration and management.
 *Scheduler service configuration*
 
 **Scheduler Settings:**
+
 - Enable/disable toggle
 - Timezone selector
 - Max concurrent jobs
@@ -421,6 +458,7 @@ Dedicated administration interface for configuration and management.
 - Max executions per schedule
 
 **Global Schedule Management:**
+
 - View all users' schedules (admin view)
 - Bulk enable/disable
 - Delete schedules
@@ -432,6 +470,7 @@ Dedicated administration interface for configuration and management.
 *Insights engine configuration*
 
 **Insights Settings:**
+
 - Enable/disable toggle
 - Mode selector (LLM only, Statistical only, Hybrid)
 - Max insights per query
@@ -445,6 +484,7 @@ Dedicated administration interface for configuration and management.
 *Export format configuration*
 
 **Export Settings:**
+
 - Enabled formats (CSV, Excel, HTML)
 - Max rows limit
 - Max file size (MB)
@@ -456,6 +496,7 @@ Dedicated administration interface for configuration and management.
 *Configuration change history*
 
 **Change Log:**
+
 - Timestamp
 - Configuration key changed
 - Old value → New value
@@ -463,6 +504,7 @@ Dedicated administration interface for configuration and management.
 - Revert button (if supported)
 
 **Filtering:**
+
 - Date range picker
 - Configuration section filter
 - Search by key name
@@ -470,9 +512,11 @@ Dedicated administration interface for configuration and management.
 ### Snapshots Tab
 
 ![Admin Snapshots Tab](assets/images/ui/snapshot.png)
+
 *Configuration backup and restore*
 
 **Snapshot Management:**
+
 - Create snapshot button
 - Snapshot list with timestamps
 - Snapshot name/description
@@ -548,11 +592,13 @@ Modify dashboard colors via CSS variables:
 ### Query Input
 
 **Good Examples:**
+
 - "Show me top 10 customers by revenue"
 - "What's the average order value last month?"
 - "List products with low stock"
 
 **Tips:**
+
 - Be specific about time ranges
 - Mention table names if known
 - Use natural language
@@ -561,12 +607,14 @@ Modify dashboard colors via CSS variables:
 ### Interpreting Results
 
 **Understanding SQL Output:**
+
 - Column headers match your question
 - Row count indicates data volume
 - Scroll for more results
 - Export for external analysis
 
 **Using Charts:**
+
 - Click chart icon on numeric results
 - Select appropriate chart type
 - Choose metric for multi-column data
@@ -575,6 +623,7 @@ Modify dashboard colors via CSS variables:
 ### Managing History
 
 **Organization:**
+
 - Star frequently-used queries
 - Clear old history periodically
 - Use descriptive names for schedules
@@ -586,6 +635,7 @@ Modify dashboard colors via CSS variables:
 ### Widget Not Loading
 
 **Check:**
+
 - JavaScript console for errors
 - Network tab for failed requests
 - CORS configuration
@@ -594,6 +644,7 @@ Modify dashboard colors via CSS variables:
 ### Slow Performance
 
 **Optimize:**
+
 - Limit result rows
 - Use specific queries
 - Enable query caching
@@ -602,6 +653,7 @@ Modify dashboard colors via CSS variables:
 ### Display Issues
 
 **Fix:**
+
 - Clear browser cache
 - Try different browser
 - Disable browser extensions
