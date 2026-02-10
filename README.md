@@ -67,24 +67,6 @@ We welcome contributions! Here's how:
 - Test all code snippets
 - Keep the barista personality ☕
 
-## 🏗️ Documentation Structure
-
-```
-docs/
-├── index.md                    # Home page
-├── getting-started/            # Installation & quick start
-├── configuration/              # Config guides
-├── widgets/                    # Widget integration
-├── features/                   # Feature documentation
-├── api/                        # API reference
-├── examples/                   # Query examples
-└── architecture/               # Design docs
-```
-
-## 🚀 Deployment
-
-Documentation is automatically deployed to GitHub Pages when changes are pushed to `main` branch via GitHub Actions.
-
 ### Manual Deploy
 
 ```bash

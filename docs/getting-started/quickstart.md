@@ -7,7 +7,7 @@ Get started with SQLatte in 5 minutes! This guide walks you through your first n
 Make sure SQLatte is running:
 
 ```bash
-curl http://localhost:5001/health
+curl http://localhost:8000/health
 ```
 
 If you see a healthy response, you're ready to go! If not, check the [Installation Guide](installation.md).
@@ -20,7 +20,7 @@ SQLatte provides multiple interfaces:
 
     Open your browser to:
     ```
-    http://localhost:5001/widget.html
+    http://localhost:8000/widget.html
     ```
     
     This gives you the standalone widget interface for testing.
@@ -40,11 +40,11 @@ SQLatte provides multiple interfaces:
         
         <div id="sqlatte-widget"></div>
         
-        <script src="http://localhost:5001/static/js/sqlatte-widget.js"></script>
+        <script src="http://0.0.0.0:8000/static/js/sqlatte-widget.js"></script>
         <script>
             SQLatte.init({
                 container: 'sqlatte-widget',
-                apiUrl: 'http://localhost:5001'
+                apiUrl: 'http://0.0.0.0:8000'
             });
         </script>
     </body>
@@ -55,7 +55,7 @@ SQLatte provides multiple interfaces:
 
     If you have analytics enabled:
     ```
-    http://localhost:5001/dashboard
+    http://localhost:8000/dashboard
     ```
 
 ## Step 3: Your First Query

@@ -8,6 +8,8 @@ SQLatte transforms natural language questions into SQL queries, making database 
 
 SQLatte is a natural language to SQL analytics platform that combines the power of Large Language Models with your databases. Think of it as having a knowledgeable data analyst who speaks your language and understands your data.
 
+![img.png](assets/images/img.png)
+
 ### Key Features
 
 - **Natural Language Queries**: Ask questions in plain English, get SQL results
@@ -19,48 +21,6 @@ SQLatte is a natural language to SQL analytics platform that combines the power 
 - **Analytics Dashboard**: Track usage, insights, and query patterns
 - **Runtime Prompts**: Customize AI behavior through admin panel
 
-## Quick Example
-
-```javascript
-// Embed SQLatte widget in your app
-<div id="sqlatte-widget"></div>
-<script src="sqlatte-widget.js"></script>
-<script>
-  SQLatte.init({
-    container: 'sqlatte-widget',
-    apiUrl: 'http://your-sqlatte-instance:5001'
-  });
-</script>
-```
-
-Then ask questions like:
-- "Show me top 10 customers by revenue this month"
-- "What's the trend of daily active users over the last quarter?"
-- "Compare sales between regions for Q4"
-
-## Architecture Highlights
-
-### The Barista Personality
-
-SQLatte acts like a friendly barista who:
-- Understands your requests naturally
-- Remembers your preferences
-- Suggests relevant insights
-- Makes complex queries feel simple
-
-### Optional Complexity Philosophy
-
-SQLatte grows with your needs:
-
-| Feature | Basic Mode | Enterprise Mode |
-|---------|-----------|-----------------|
-| Querying | ✓ Config-based | ✓ Session-based auth |
-| Storage | ✓ In-memory | ✓ PostgreSQL persistence |
-| Automation | - | ✓ Scheduled queries |
-| Analytics | - | ✓ Full dashboard |
-| Customization | - | ✓ Runtime prompts |
-
-Features activate through configuration - no breaking changes, no forced complexity.
 
 ## Getting Started
 

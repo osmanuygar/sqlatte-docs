@@ -27,12 +27,12 @@ This guide will help you install and set up SQLatte on your system.
 
     ### Create Configuration File
 
-    Create a `config.yaml` file in the root directory:
+    Create a `config.yaml` file in the config/ directory:
 
     ```yaml
     app:
       host: 0.0.0.0
-      port: 5001
+      port: 8000
       debug: false
     
     database:
@@ -55,7 +55,7 @@ This guide will help you install and set up SQLatte on your system.
     python app.py
     ```
 
-    SQLatte will start at `http://localhost:5001`
+    SQLatte will start at `http://localhost:8000`
 
 === "Docker"
 
@@ -72,9 +72,9 @@ This guide will help you install and set up SQLatte on your system.
         ports:
           - "5001:5001"
         volumes:
-          - ./config.yaml:/app/config.yaml
+          - ./config.yaml:/app/config/config.yaml
         environment:
-          - SQLATTE_CONFIG=/app/config.yaml
+          - SQLATTE_CONFIG=/app/config/config.yaml
     ```
 
     Build and run:
@@ -106,34 +106,12 @@ This guide will help you install and set up SQLatte on your system.
     python app.py --debug
     ```
 
-## Environment Variables
-
-SQLatte supports environment variable overrides:
-
-```bash
-# Database configuration
-export SQLATTE_DB_HOST=localhost
-export SQLATTE_DB_PORT=5432
-export SQLATTE_DB_NAME=mydb
-export SQLATTE_DB_USER=dbuser
-export SQLATTE_DB_PASSWORD=dbpassword
-
-# LLM configuration
-export SQLATTE_LLM_PROVIDER=anthropic
-export SQLATTE_LLM_API_KEY=your-api-key
-export SQLATTE_LLM_MODEL=claude-sonnet-4-5-20250929
-
-# App configuration
-export SQLATTE_HOST=0.0.0.0
-export SQLATTE_PORT=5001
-```
-
 ## Verify Installation
 
 ### Test the API
 
 ```bash
-curl http://localhost:5001/health
+curl http://localhost:8000/health
 ```
 
 Expected response:
@@ -149,7 +127,7 @@ Expected response:
 
 Open your browser and navigate to:
 ```
-http://localhost:5001/widget.html
+http://localhost:8000/demo.html
 ```
 
 You should see the SQLatte widget interface.
@@ -196,10 +174,10 @@ If port 5001 is already in use:
 ```bash
 # Change port in config.yaml
 app:
-  port: 5002
+  port: 8000
 
 # Or use environment variable
-export SQLATTE_PORT=5002
+export SQLATTE_PORT=8001
 ```
 
 ## Upgrading
