@@ -23,7 +23,7 @@ The standard widget provides a simple chat interface with backend-configured dat
 
 #### Badge Button
 
-![Standard Widget Badge](../assets/images/ui/standard-widget-badge.png)
+![Standard Widget Badge](assets/images/ui/standard-widget-badge.png)
 
 *The coffee cup badge that opens the SQLatte widget (bottom-right by default)*
 
@@ -243,33 +243,33 @@ The full-featured web application for comprehensive SQLatte access.
 
 **Analytics Dashboard Sections:**
 
-1. **Overview Cards**
+**Overview Cards**
 
    - Total queries executed
    - Average execution time
    - Success rate percentage
    - Active users count
 
-2. **Query Performance Chart**
+**Query Performance Chart**
 
    - Execution time trends
    - Query volume over time
    - Success/failure ratio
    - Filtering by time range
 
-3. **Top Queries Table**
+**Top Queries Table**
 
    - Most frequently run queries
    - Average execution time
    - Success rate
    - Last execution timestamp
 
-4. **Insights Summary**
+**Insights Summary**
    - AI-generated insights count
    - Most common insight types
    - Insights by category
 
-5. **Database Usage**
+**Database Usage**
    - Tables most queried
    - Schema access patterns
    - Query complexity distribution
@@ -281,7 +281,7 @@ The full-featured web application for comprehensive SQLatte access.
 
 **Schedule Management Features:**
 
-1. **Schedule List**
+ **Schedule List**
 
    - All active and inactive schedules
    - Frequency (daily, weekly, monthly)
@@ -289,7 +289,7 @@ The full-featured web application for comprehensive SQLatte access.
    - Status indicator
    - Edit/Delete buttons
 
-2. **Create Schedule Modal**
+ **Create Schedule Modal**
   
    - Schedule name
    - Query/question selector
@@ -299,7 +299,7 @@ The full-featured web application for comprehensive SQLatte access.
    - Format selector (CSV, Excel, HTML)
    - Custom email subject/body
 
-3. **Execution History**
+ **Execution History**
 
    - Past execution logs
    - Success/failure status
@@ -308,7 +308,7 @@ The full-featured web application for comprehensive SQLatte access.
    - Error messages (if failed)
    - Email delivery status
 
-4. **Email Preview**
+ **Email Preview**
 
    - Preview email template
    - Test send to your email
@@ -389,14 +389,14 @@ Dedicated administration interface for configuration and management.
 
 **Prompt Editor Features:**
 
-1. **Prompt Selector**
+ **Prompt Selector**
 
    - Intent Detection
    - Barista Personality
    - SQL Generation
    - Insights Generation
 
-2. **Editor Area**
+ **Editor Area**
 
    - Multi-line textarea
    - Syntax highlighting
@@ -404,14 +404,14 @@ Dedicated administration interface for configuration and management.
    - Character count
    - Line numbers
 
-3. **Action Buttons**
+ **Action Buttons**
 
    - Save prompt (to database)
    - Reset to default
    - Preview with sample
    - Copy to clipboard
 
-4. **Template Variables Helper**
+ **Template Variables Helper**
 
    - Available variables list
    - Click to insert
