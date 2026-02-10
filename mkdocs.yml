@@ -85,6 +85,9 @@ nav:
     - Analytics Setup: configuration/analytics.md
     - Email Settings: configuration/email.md
   
+  - User Interface:
+    - UI Guide & Screenshots: ui-guide.md
+  
   - Widgets:
     - Widget Types: widgets/overview.md
     - Standard Widget: widgets/standard.md

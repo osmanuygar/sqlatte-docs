@@ -186,11 +186,49 @@ Customize AI behavior through admin panel:
 
 ```yaml
 prompts:
-  system_prompt: |
-    Default system prompt...
+  intent_detection: |
+    Analyze user question and determine if it needs SQL.
+    
+    Tables: {schema_info}
+    Question: {question}
+    
+    Return: INTENT: sql|chat
+
+  barista_personality: |
+    You are SQLatte ☕ - friendly data assistant.
+    Be helpful and use coffee metaphors occasionally.
+
+  sql_generation: |
+    Generate SQL from natural language.
+    
+    Schema: {schema_info}
+    Question: {question}
+    
+    Rules:
+    1. Use JOINs appropriately
+    2. Add LIMIT clause
+    3. Handle partitions (dt column) efficiently
+    
+    Format: SQL: [query] | EXPLANATION: [details]
+
+  insights_generation: |
+    Analyze results and generate 1-3 insights.
+    
+    Question: {user_question}
+    SQL: {sql_query}
+    Data: {data_preview}
+    
+    Focus on: trends, anomalies, recommendations
 ```
 
-When analytics is enabled, prompts can be managed via admin UI.
+**Prompt Template Variables:**
+- `{schema_info}` - Available tables and columns
+- `{question}` - User's natural language question
+- `{user_question}` - Original question (for insights)
+- `{sql_query}` - Generated SQL query
+- `{data_preview}` - Sample query results
+
+When analytics is enabled, prompts can be managed via admin UI with hot reload.
 
 [Learn more →](../features/runtime-prompts.md)
 
