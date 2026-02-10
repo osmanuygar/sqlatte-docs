@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#principles" class="md-skip">
+        <a href="#design-principles" class="md-skip">
           Skip to content
         </a>
       
@@ -1653,6 +1653,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Principles
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1669,6 +1687,291 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#core-design-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Design Principles
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Design Principles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-widget-first-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Widget-First Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-optional-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Optional Complexity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-conversational-data-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Conversational Data Analytics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-plugin-based-extensibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Plugin-Based Extensibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-database-provider-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Database Provider Abstraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-llm-provider-abstraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. LLM Provider Abstraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Configuration Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-scheduled-execution-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Scheduled Execution System
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-analytics-insights" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Analytics &amp; Insights
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-security-multi-tenancy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Security &amp; Multi-Tenancy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design Trade-offs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Trade-offs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-in-memory-vs-persistent-conversations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. In-Memory vs Persistent Conversations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-apscheduler-vs-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. APScheduler vs Celery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-vanilla-js-vs-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Vanilla JS vs React
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extension Points
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extension Points">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-custom-plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Custom Plugins
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-custom-database-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Custom Database Providers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-custom-llm-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Custom LLM Providers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-architecture-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Future Architecture Enhancements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Architecture Enhancements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planned Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1730,8 +2033,446 @@
   
 
 
-<h1 id="principles">Principles<a class="headerlink" href="#principles" title="Permanent link">&para;</a></h1>
-<p>Documentation coming soon.</p>
+<h1 id="design-principles">Design Principles<a class="headerlink" href="#design-principles" title="Permanent link">&para;</a></h1>
+<p>SQLatte is built on a foundation of <strong>optional complexity</strong> - start simple, add features when needed. This philosophy permeates every architectural decision, from the plugin system to the configuration management.</p>
+<h2 id="core-design-principles">Core Design Principles<a class="headerlink" href="#core-design-principles" title="Permanent link">&para;</a></h2>
+<h3 id="1-widget-first-architecture">1. Widget-First Architecture<a class="headerlink" href="#1-widget-first-architecture" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> SQLatte is designed to be embeddable anywhere, not just a standalone application.</p>
+<p><strong>Key Decisions:</strong>
+- <strong>Two Widget Modes:</strong>
+  - <strong>Standard Widget</strong> - Config-based auth, shared database connection
+  - <strong>Auth Widget</strong> - Per-user credentials, session isolation
+- <strong>Single-File Components</strong> - All HTML/CSS/JS in one file for easy embedding
+- <strong>CORS-Ready</strong> - Cross-domain support built-in
+- <strong>Zero Dependencies</strong> - Pure JavaScript, no framework lock-in</p>
+<p><strong>Benefits:</strong>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">&lt;!-- Embed in any site with 2 lines --&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://your-server/static/js/sqlatte-badge.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nx">SQLatteWidget</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span><span class="nx">apiBase</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://your-server&#39;</span><span class="p">});&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div></p>
+<p><strong>Design Trade-offs:</strong>
+- ✅ <strong>Pro:</strong> Extremely easy to integrate anywhere
+- ✅ <strong>Pro:</strong> No build process for users
+- ⚠️ <strong>Con:</strong> Larger initial JavaScript bundle
+- ⚠️ <strong>Con:</strong> Limited to vanilla JS patterns</p>
+<hr />
+<h3 id="2-optional-complexity">2. Optional Complexity<a class="headerlink" href="#2-optional-complexity" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> Every feature beyond basic NL-to-SQL is optional and can be disabled.</p>
+<p><strong>Progressive Feature Adoption:</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Phase 1: Basic (Day 1)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">database</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nv">...</span><span class="p p-Indicator">}</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">llm</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nv">...</span><span class="p p-Indicator">}</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Phase 2: Add Analytics (Week 1)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">analytics</span><span class="p">:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># Phase 3: Add Sessions (Month 1)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="nt">auth</span><span class="p">:</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># Phase 4: Add Scheduling (Month 2)</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="nt">scheduler</span><span class="p">:</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="nt">email</span><span class="p">:</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ Quick onboarding (5 minutes to first query)
+- ✅ Scale complexity with needs
+- ✅ Lower resource usage when features disabled
+- ✅ Easier debugging (fewer moving parts)</p>
+<p><strong>Implementation:</strong>
+- Features check <code>enabled</code> flag at runtime
+- Graceful degradation (e.g., email defaults to mock mode)
+- No startup errors when optional features disabled</p>
+<hr />
+<h3 id="3-conversational-data-analytics">3. Conversational Data Analytics<a class="headerlink" href="#3-conversational-data-analytics" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> Data exploration should feel like a conversation, not writing code.</p>
+<p><strong>Conversation Memory System:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Session-Based Memory</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">User</span><span class="p">:</span> <span class="s2">&quot;Show me top customers&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="err">↓</span> <span class="p">[</span><span class="n">Stores</span> <span class="ow">in</span> <span class="n">session</span><span class="p">]</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">Assistant</span><span class="p">:</span> <span class="p">[</span><span class="n">Returns</span> <span class="n">SQL</span> <span class="o">+</span> <span class="n">Results</span><span class="p">]</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  <span class="err">↓</span> <span class="p">[</span><span class="n">Stores</span> <span class="ow">in</span> <span class="n">session</span><span class="p">]</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">User</span><span class="p">:</span> <span class="s2">&quot;What about last month?&quot;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  <span class="err">↓</span> <span class="p">[</span><span class="n">Uses</span> <span class="n">context</span> <span class="kn">from</span><span class="w"> </span><span class="nn">session</span><span class="p">]</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">Assistant</span><span class="p">:</span> <span class="p">[</span><span class="n">Understands</span> <span class="s2">&quot;last month&quot;</span> <span class="n">refers</span> <span class="n">to</span> <span class="n">customers</span><span class="p">]</span>
+</span></code></pre></div></p>
+<p><strong>Architecture:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ConversationManager (In-Memory)
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  ├── Session 1 (User A)
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  │   ├── Message 1: &quot;Show top products&quot;
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  │   ├── Message 2: [SQL Result]
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  │   ├── Message 3: &quot;What about revenue?&quot;
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  │   └── Message 4: [SQL Result with context]
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  └── Session 2 (User B)
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>      └── Independent conversation
+</span></code></pre></div></p>
+<p><strong>Key Components:</strong>
+- <code>ConversationSession</code> - Single conversation thread
+- <code>ConversationMessage</code> - Individual message (user/assistant)
+- <code>ConversationManager</code> - Manages multiple sessions
+- <strong>Session Timeout:</strong> Configurable (default 60 min)
+- <strong>Context Window:</strong> Last 10 messages sent to LLM</p>
+<p><strong>Benefits:</strong>
+- ✅ Natural follow-up questions
+- ✅ Context-aware query refinement
+- ✅ Reduced user effort (no repeated details)
+- ⚠️ <strong>Limitation:</strong> In-memory only (resets on restart)</p>
+<hr />
+<h3 id="4-plugin-based-extensibility">4. Plugin-Based Extensibility<a class="headerlink" href="#4-plugin-based-extensibility" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> Core should be minimal, extensions should be modular.</p>
+<p><strong>Plugin Architecture:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">BasePlugin</span> <span class="p">(</span><span class="n">Abstract</span><span class="p">)</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="err">├──</span> <span class="n">initialize</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>       <span class="c1"># Called on startup</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="err">├──</span> <span class="n">register_routes</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>  <span class="c1"># Add custom endpoints</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="err">├──</span> <span class="n">before_request</span><span class="p">()</span>      <span class="c1"># Request middleware</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="err">├──</span> <span class="n">after_request</span><span class="p">()</span>       <span class="c1"># Response middleware</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="err">└──</span> <span class="n">shutdown</span><span class="p">()</span>            <span class="c1"># Cleanup</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">AuthPlugin</span> <span class="p">(</span><span class="n">Implementation</span><span class="p">)</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="err">├──</span> <span class="o">/</span><span class="n">auth</span><span class="o">/</span><span class="n">login</span>           <span class="c1"># Custom endpoint</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="err">├──</span> <span class="o">/</span><span class="n">auth</span><span class="o">/</span><span class="n">query</span>           <span class="c1"># Override default query</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="err">├──</span> <span class="n">SessionManager</span>        <span class="c1"># Per-user sessions</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="err">└──</span> <span class="n">ThreadPoolExecutor</span>    <span class="c1"># Concurrent user isolation</span>
+</span></code></pre></div></p>
+<p><strong>Plugin System Benefits:</strong>
+- ✅ <strong>Isolation:</strong> Plugins don't interfere with core
+- ✅ <strong>Hot-Swappable:</strong> Enable/disable without code changes
+- ✅ <strong>Backward Compatible:</strong> Standard widget works without plugins
+- ✅ <strong>Extensible:</strong> Add Slack plugin, webhooks, custom auth</p>
+<p><strong>Plugin Examples:</strong></p>
+<p><strong>Auth Plugin:</strong>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">plugins</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">auth</span><span class="p">:</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">session_ttl_minutes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">480</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nt">max_workers</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">40</span>
+</span></code></pre></div>
+<strong>Adds:</strong> Multi-tenant auth, per-user DB connections</p>
+<p><strong>Custom Integration Plugin:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">SlackPlugin</span><span class="p">(</span><span class="n">BasePlugin</span><span class="p">):</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">register_routes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">):</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        <span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/slack/query&quot;</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">slack_query</span><span class="p">(</span><span class="n">payload</span><span class="p">):</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>            <span class="c1"># Handle Slack slash command</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Results...&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<strong>Adds:</strong> Slack integration for team queries</p>
+<hr />
+<h3 id="5-database-provider-abstraction">5. Database Provider Abstraction<a class="headerlink" href="#5-database-provider-abstraction" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> Support multiple databases through a unified interface.</p>
+<p><strong>Provider Pattern:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">DatabaseProvider</span> <span class="p">(</span><span class="n">Abstract</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="err">├──</span> <span class="n">execute_query</span><span class="p">(</span><span class="n">sql</span><span class="p">)</span> <span class="err">→</span> <span class="p">(</span><span class="n">columns</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="err">├──</span> <span class="n">get_tables</span><span class="p">()</span> <span class="err">→</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="err">└──</span> <span class="n">get_table_schema</span><span class="p">(</span><span class="n">table</span><span class="p">)</span> <span class="err">→</span> <span class="nb">str</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">TrinoProvider</span> <span class="p">(</span><span class="n">Implementation</span><span class="p">)</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="err">└──</span> <span class="n">Uses</span> <span class="n">trino</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">client</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">PostgreSQLProvider</span> <span class="p">(</span><span class="n">Implementation</span><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="err">└──</span> <span class="n">Uses</span> <span class="n">psycopg2</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">MySQLProvider</span> <span class="p">(</span><span class="n">Implementation</span><span class="p">)</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="err">└──</span> <span class="n">Uses</span> <span class="n">mysql</span><span class="o">-</span><span class="n">connector</span><span class="o">-</span><span class="n">python</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="n">BigQueryProvider</span> <span class="p">(</span><span class="n">Implementation</span><span class="p">)</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="err">└──</span> <span class="n">Uses</span> <span class="n">google</span><span class="o">-</span><span class="n">cloud</span><span class="o">-</span><span class="n">bigquery</span>
+</span></code></pre></div></p>
+<p><strong>Factory Pattern:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">ProviderFactory</span><span class="o">.</span><span class="n">create_db_provider</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  <span class="err">↓</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="n">Reads</span> <span class="n">config</span><span class="p">[</span><span class="s1">&#39;database&#39;</span><span class="p">][</span><span class="s1">&#39;provider&#39;</span><span class="p">]</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  <span class="err">↓</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>  <span class="n">Returns</span><span class="p">:</span> <span class="n">TrinoProvider</span> <span class="o">|</span> <span class="n">PostgreSQLProvider</span> <span class="o">|</span> <span class="n">MySQLProvider</span> <span class="o">|</span> <span class="n">BigQueryProvider</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ <strong>Uniform API:</strong> Same interface for all databases
+- ✅ <strong>Easy Migration:</strong> Switch providers via config
+- ✅ <strong>Database-Specific Optimizations:</strong> Each provider can optimize queries
+- ✅ <strong>Extensible:</strong> Add new providers without touching core</p>
+<p><strong>Design Considerations:</strong>
+- SQL syntax differences handled by prompts (database-specific rules)
+- Connection pooling per provider
+- Graceful error handling (DB-specific error messages)</p>
+<hr />
+<h3 id="6-llm-provider-abstraction">6. LLM Provider Abstraction<a class="headerlink" href="#6-llm-provider-abstraction" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> Not locked to a single AI provider.</p>
+<p><strong>Provider Pattern:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">LLMProvider</span> <span class="p">(</span><span class="n">Abstract</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="err">├──</span> <span class="n">determine_intent</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span> <span class="err">→</span> <span class="nb">dict</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="err">├──</span> <span class="n">generate_sql</span><span class="p">(</span><span class="n">question</span><span class="p">,</span> <span class="n">schema</span><span class="p">)</span> <span class="err">→</span> <span class="p">(</span><span class="n">sql</span><span class="p">,</span> <span class="n">explanation</span><span class="p">)</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="err">├──</span> <span class="n">generate_chat_response</span><span class="p">(</span><span class="n">question</span><span class="p">)</span> <span class="err">→</span> <span class="nb">str</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="err">└──</span> <span class="n">generate_insights</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="err">→</span> <span class="n">List</span><span class="p">[</span><span class="n">Insight</span><span class="p">]</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="n">AnthropicProvider</span> <span class="p">(</span><span class="n">Implementation</span><span class="p">)</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="err">└──</span> <span class="n">Uses</span> <span class="n">anthropic</span> <span class="n">SDK</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="n">GeminiProvider</span> <span class="p">(</span><span class="n">Implementation</span><span class="p">)</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="err">└──</span> <span class="n">Uses</span> <span class="n">google</span><span class="o">-</span><span class="n">generativeai</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="n">VertexAIProvider</span> <span class="p">(</span><span class="n">Implementation</span><span class="p">)</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    <span class="err">└──</span> <span class="n">Uses</span> <span class="n">google</span><span class="o">-</span><span class="n">cloud</span><span class="o">-</span><span class="n">aiplatform</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ <strong>Flexibility:</strong> Choose best LLM for your use case
+- ✅ <strong>Cost Optimization:</strong> Switch to cheaper provider for simple queries
+- ✅ <strong>A/B Testing:</strong> Test prompt quality across providers
+- ✅ <strong>Fallback:</strong> If one provider has issues, switch to another</p>
+<hr />
+<h3 id="7-configuration-management">7. Configuration Management<a class="headerlink" href="#7-configuration-management" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> Single source of truth, multiple override mechanisms.</p>
+<p><strong>Configuration Hierarchy:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>1. config.yaml (Base configuration)
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    ↓
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>2. Environment Variables (Override specific values)
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    ↓
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>3. Runtime Overrides (Admin panel changes)
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    ↓
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>4. Database Persistence (Saved overrides)
+</span></code></pre></div></p>
+<p><strong>Hot Reload Architecture:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">ConfigManager</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="err">├──</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span> <span class="p">(</span><span class="n">loaded</span> <span class="n">on</span> <span class="n">startup</span><span class="p">)</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="err">├──</span> <span class="n">runtime_overrides</span> <span class="p">(</span><span class="ow">in</span><span class="o">-</span><span class="n">memory</span> <span class="nb">dict</span><span class="p">)</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>    <span class="err">├──</span> <span class="n">ConfigDB</span> <span class="p">(</span><span class="n">optional</span> <span class="n">persistent</span> <span class="n">storage</span><span class="p">)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    <span class="err">└──</span> <span class="n">reload</span><span class="p">()</span> <span class="err">→</span> <span class="n">Merge</span> <span class="n">config</span> <span class="o">+</span> <span class="n">overrides</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ <strong>Environment-Specific:</strong> Dev/staging/prod via env vars
+- ✅ <strong>Hot Reload:</strong> Change LLM params without restart
+- ✅ <strong>Audit Trail:</strong> Track all config changes
+- ✅ <strong>Rollback:</strong> Snapshots for config recovery</p>
+<p><strong>Key Features:</strong>
+- <strong>Prompts Management:</strong> Edit AI prompts via admin UI
+- <strong>Provider Switching:</strong> Change LLM/DB without restart (where possible)
+- <strong>Secrets Management:</strong> Support for <code>${ENV_VAR}</code> syntax
+- <strong>Validation:</strong> Schema validation on load</p>
+<hr />
+<h3 id="8-scheduled-execution-system">8. Scheduled Execution System<a class="headerlink" href="#8-scheduled-execution-system" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> Automation should be simple, not enterprise-complex.</p>
+<p><strong>Architecture:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>APScheduler (Background Jobs)
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    ├── Cron Expressions (flexible scheduling)
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    ├── Job Queue (in-memory or Redis)
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    └── Execution Logs (PostgreSQL or in-memory)
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>Email Service
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    ├── SMTP Client (sendgrid, gmail, etc.)
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    ├── Template Engine (HTML reports)
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    ├── Attachment Builder (CSV, Excel, HTML)
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    └── Mock Mode (when SMTP disabled)
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>ScheduleManager
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    ├── create_schedule()
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>    ├── execute_schedule()
+</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>    └── get_execution_history()
+</span></code></pre></div></p>
+<p><strong>Graceful Degradation:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">if</span> <span class="n">email</span><span class="o">.</span><span class="n">enabled</span><span class="p">:</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="n">send_actual_email</span><span class="p">()</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="c1"># Mock mode - logs but doesn&#39;t send</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Mock: Would send to </span><span class="si">{</span><span class="n">recipients</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ <strong>Flexible Scheduling:</strong> Cron syntax (daily, weekly, monthly)
+- ✅ <strong>Email Delivery:</strong> Automated report distribution
+- ✅ <strong>Execution History:</strong> Track success/failure
+- ✅ <strong>Works Without Email:</strong> Scheduler runs, logs results</p>
+<hr />
+<h3 id="9-analytics-insights">9. Analytics &amp; Insights<a class="headerlink" href="#9-analytics-insights" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> Make data analysis accessible, not just query execution.</p>
+<p><strong>Two-Tier Analytics:</strong></p>
+<p><strong>Tier 1: Query Analytics (Optional)</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>PostgreSQL Storage (or In-Memory)
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    ├── query_history table
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    ├── execution_logs table
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    └── insights_cache table
+</span></code></pre></div></p>
+<p><strong>Tier 2: Insights Engine</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Hybrid Mode (Recommended)
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    ├── LLM Insights (pattern detection, recommendations)
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>    └── Statistical Analysis (trends, anomalies)
+</span></code></pre></div></p>
+<p><strong>Insights Generation Flow:</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Query Results
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    ↓
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>[Statistical Analysis]
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    ├── Detect trends (growth/decline)
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    ├── Find anomalies (outliers)
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    └── Calculate metrics (avg, median, etc.)
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    ↓
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>[LLM Analysis]
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>    ├── Context: User question + SQL + Results
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    ├── Generate: Actionable insights
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>    └── Format: TYPE | SEVERITY | MESSAGE
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>    ↓
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>[Merge &amp; Return]
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>    └── Best insights from both approaches
+</span></code></pre></div></p>
+<p><strong>Benefits:</strong>
+- ✅ <strong>Hybrid Approach:</strong> LLM creativity + statistical accuracy
+- ✅ <strong>Context-Aware:</strong> Considers temporal patterns
+- ✅ <strong>Actionable:</strong> Recommendations, not just observations
+- ✅ <strong>Optional:</strong> Can disable entirely for lightweight deployment</p>
+<hr />
+<h3 id="10-security-multi-tenancy">10. Security &amp; Multi-Tenancy<a class="headerlink" href="#10-security-multi-tenancy" title="Permanent link">&para;</a></h3>
+<p><strong>Philosophy:</strong> Secure by design, with layers of isolation.</p>
+<p><strong>Standard Widget (Single-Tenant):</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>User → Backend Config → Shared DB Connection
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    ├── No user credentials stored
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    ├── Backend controls all access
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    └── Suitable for internal tools
+</span></code></pre></div></p>
+<p><strong>Auth Widget (Multi-Tenant):</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>User A → Login → Session A → DB Config A → Isolated Connection
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>User B → Login → Session B → DB Config B → Isolated Connection
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>SessionManager (Thread-Safe)
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    ├── Per-user sessions
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    ├── Credential encryption
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>    ├── Session timeouts
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>    └── Automatic cleanup
+</span></code></pre></div></p>
+<p><strong>Security Layers:</strong></p>
+<ol>
+<li>
+<p><strong>Session Isolation:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>   <span class="k">class</span><span class="w"> </span><span class="nc">SessionManager</span><span class="p">:</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>       <span class="n">sessions</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">AuthSession</span><span class="p">]</span>  <span class="c1"># session_id → session</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>       <span class="n">lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">RLock</span><span class="p">()</span>  <span class="c1"># Thread-safe access</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Credential Isolation:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>   <span class="c1"># User credentials never stored in logs</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>   <span class="n">db_config</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>       <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="n">session</span><span class="o">.</span><span class="n">username</span><span class="p">,</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>       <span class="s1">&#39;password&#39;</span><span class="p">:</span> <span class="s1">&#39;***REDACTED***&#39;</span>  <span class="c1"># Masked in logs</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>   <span class="p">}</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p><strong>Connection Pooling:</strong>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>   <span class="n">ThreadPoolExecutor</span><span class="p">(</span><span class="n">max_workers</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>       <span class="err">└──</span> <span class="n">Isolated</span> <span class="n">query</span> <span class="n">execution</span> <span class="n">per</span> <span class="n">user</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+<p><strong>Benefits:</strong>
+- ✅ <strong>Session-Based Auth:</strong> JWT-free, simple
+- ✅ <strong>Per-User Connections:</strong> Complete data isolation
+- ✅ <strong>Thread-Safe:</strong> Concurrent users don't interfere
+- ✅ <strong>Automatic Cleanup:</strong> Expired sessions removed</p>
+<hr />
+<h2 id="design-trade-offs">Design Trade-offs<a class="headerlink" href="#design-trade-offs" title="Permanent link">&para;</a></h2>
+<h3 id="1-in-memory-vs-persistent-conversations">1. In-Memory vs Persistent Conversations<a class="headerlink" href="#1-in-memory-vs-persistent-conversations" title="Permanent link">&para;</a></h3>
+<p><strong>Current:</strong> In-memory (simple, fast)
+<div class="language-python highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">ConversationManager</span><span class="o">.</span><span class="n">sessions</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># RAM</span>
+</span></code></pre></div></p>
+<p><strong>Trade-off:</strong>
+- ✅ <strong>Pro:</strong> Fast, no DB overhead
+- ⚠️ <strong>Con:</strong> Lost on restart
+- ⚠️ <strong>Con:</strong> Not shared across instances</p>
+<p><strong>Future:</strong> Optional PostgreSQL backend</p>
+<h3 id="2-apscheduler-vs-celery">2. APScheduler vs Celery<a class="headerlink" href="#2-apscheduler-vs-celery" title="Permanent link">&para;</a></h3>
+<p><strong>Current:</strong> APScheduler (simpler)</p>
+<p><strong>Trade-off:</strong>
+- ✅ <strong>Pro:</strong> Zero dependencies, built-in
+- ✅ <strong>Pro:</strong> Works without Redis
+- ⚠️ <strong>Con:</strong> Limited to single instance
+- ⚠️ <strong>Con:</strong> No distributed task queue</p>
+<h3 id="3-vanilla-js-vs-react">3. Vanilla JS vs React<a class="headerlink" href="#3-vanilla-js-vs-react" title="Permanent link">&para;</a></h3>
+<p><strong>Current:</strong> Vanilla JavaScript</p>
+<p><strong>Trade-off:</strong>
+- ✅ <strong>Pro:</strong> No build step for users
+- ✅ <strong>Pro:</strong> Smaller bundle (no framework)
+- ⚠️ <strong>Con:</strong> More verbose code
+- ⚠️ <strong>Con:</strong> No component state management</p>
+<hr />
+<h2 id="extension-points">Extension Points<a class="headerlink" href="#extension-points" title="Permanent link">&para;</a></h2>
+<h3 id="1-custom-plugins">1. Custom Plugins<a class="headerlink" href="#1-custom-plugins" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">src.plugins.base_plugin</span><span class="w"> </span><span class="kn">import</span> <span class="n">BasePlugin</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">CustomPlugin</span><span class="p">(</span><span class="n">BasePlugin</span><span class="p">):</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">register_routes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">):</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>        <span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/custom&quot;</span><span class="p">)</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>        <span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">custom_route</span><span class="p">():</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>            <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Custom feature&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="2-custom-database-providers">2. Custom Database Providers<a class="headerlink" href="#2-custom-database-providers" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">src.core.db_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">DatabaseProvider</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">CustomDBProvider</span><span class="p">(</span><span class="n">DatabaseProvider</span><span class="p">):</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">execute_query</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sql</span><span class="p">):</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>        <span class="c1"># Custom DB logic</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>        <span class="k">pass</span>
+</span></code></pre></div>
+<h3 id="3-custom-llm-providers">3. Custom LLM Providers<a class="headerlink" href="#3-custom-llm-providers" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">src.core.llm_provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">LLMProvider</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">CustomLLMProvider</span><span class="p">(</span><span class="n">LLMProvider</span><span class="p">):</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">generate_sql</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">question</span><span class="p">,</span> <span class="n">schema</span><span class="p">):</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>        <span class="c1"># Custom LLM logic</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>        <span class="k">pass</span>
+</span></code></pre></div>
+<hr />
+<h2 id="future-architecture-enhancements">Future Architecture Enhancements<a class="headerlink" href="#future-architecture-enhancements" title="Permanent link">&para;</a></h2>
+<h3 id="planned-features">Planned Features<a class="headerlink" href="#planned-features" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Distributed Sessions</strong></li>
+<li>Redis-backed conversation storage</li>
+<li>
+<p>Shared sessions across instances</p>
+</li>
+<li>
+<p><strong>Advanced Caching</strong></p>
+</li>
+<li>Query result caching (Redis)</li>
+<li>Semantic similarity matching</li>
+<li>
+<p>Deduplicate identical queries</p>
+</li>
+<li>
+<p><strong>Webhooks &amp; Integrations</strong></p>
+</li>
+<li>Slack plugin</li>
+<li>MS Teams plugin</li>
+<li>
+<p>Custom webhook endpoints</p>
+</li>
+<li>
+<p><strong>Advanced Auth</strong></p>
+</li>
+<li>OAuth2 support</li>
+<li>SAML integration</li>
+<li>
+<p>RBAC (Role-Based Access Control)</p>
+</li>
+<li>
+<p><strong>Query Optimization</strong></p>
+</li>
+<li>Query plan analysis</li>
+<li>Automatic index suggestions</li>
+<li>Partition recommendation engine</li>
+</ol>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>SQLatte's architecture prioritizes:</p>
+<ol>
+<li>✅ <strong>Simplicity</strong> - Get started in 5 minutes</li>
+<li>✅ <strong>Flexibility</strong> - Choose your database, LLM, features</li>
+<li>✅ <strong>Extensibility</strong> - Plugin system for custom needs</li>
+<li>✅ <strong>Conversation-First</strong> - Memory and context awareness</li>
+<li>✅ <strong>Optional Complexity</strong> - Add features when needed</li>
+</ol>
+<p><strong>Core Philosophy:</strong> Make data analytics conversational, embeddable, and progressively complex.</p>
+<hr />
+<p><strong>Next:</strong> <a href="../overview/">System Overview</a> for component-level architecture details.</p>
 
 
 
@@ -1754,7 +2495,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 9, 2026 14:45:25 UTC">February 9, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 10, 2026 15:03:06 UTC">February 10, 2026</span>
   </span>
 
     
