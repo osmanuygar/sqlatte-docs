@@ -1,0 +1,3143 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Natural Language to SQL Analytics Platform">
+      
+      
+        <meta name="author" content="Osmanuygar">
+      
+      
+        <link rel="canonical" href="https://osmanuygar.github.io/sqlatte-docs/ui-guide/">
+      
+      
+        <link rel="prev" href="../configuration/email/">
+      
+      
+        <link rel="next" href="../widgets/overview/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>UI Guide & Screenshots - SQLatte Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#user-interface-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SQLatte Documentation" class="md-header__button md-logo" aria-label="SQLatte Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SQLatte Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UI Guide & Screenshots
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/osmanuygar/sqlatte" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    osmanuygar/sqlatte
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../configuration/overview/" class="md-tabs__link">
+          
+  
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  User Interface
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../widgets/overview/" class="md-tabs__link">
+          
+  
+  
+  Widgets
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../features/dashboard/" class="md-tabs__link">
+          
+  
+  
+  Features
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../api/endpoints/" class="md-tabs__link">
+          
+  
+  
+  API Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../examples/basic/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../architecture/principles/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SQLatte Documentation" class="md-nav__button md-logo" aria-label="SQLatte Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SQLatte Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/osmanuygar/sqlatte" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    osmanuygar/sqlatte
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/quickstart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Start
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/config-yaml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    config.yaml Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/database-providers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database Providers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/llm-providers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM Providers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/email/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Email Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Interface
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Interface
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI Guide & Screenshots
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI Guide & Screenshots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widget-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget Interfaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Widget Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#standard-widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standard Widget
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standard Widget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#badge-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Badge Button
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-modal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chat Modal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-code-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL Code Display
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chart-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chart Visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        History Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#favorites-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Favorites Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auth-widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auth Widget
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Auth Widget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-modal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login Modal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticated-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authenticated Chat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Session Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unified-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unified Dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unified Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#home-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistant-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assistant Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#demo-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demo Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analytics Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedules-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schedules Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admin Panel
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Admin Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#main-admin-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main Admin Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#providers-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Providers Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompts-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompts Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#email-smtp-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Email &amp; SMTP Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduler-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scheduler Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insights-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Insights Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#history-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        History Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#snapshots-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Snapshots Tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#responsive-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Responsive Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Responsive Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#desktop-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Desktop View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tablet-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tablet View
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mobile View
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dark-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dark Theme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dark Theme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widget-dark-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget Dark Theme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-dark-theme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Dark Theme
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Accessibility Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keyboard-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Keyboard Navigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screen-reader-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screen Reader Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Accessibility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Customization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widget-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget Styling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dashboard-theming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dashboard Theming
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#query-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query Input
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpreting-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpreting Results
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing History
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-ui-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting UI Issues
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting UI Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widget-not-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widget Not Loading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slow-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slow Performance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Display Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Tutorials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Widgets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Widgets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../widgets/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Widget Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../widgets/standard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Standard Widget
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../widgets/auth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auth Widget
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../widgets/embedding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Embedding Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Features
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/schedules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduled Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analytics & Insights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/runtime-prompts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Runtime Prompts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/barista/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Barista Personality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/endpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    REST Endpoints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/websocket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebSocket API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complex Queries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/schedules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Design Principles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="user-interface-guide">User Interface Guide<a class="headerlink" href="#user-interface-guide" title="Permanent link">&para;</a></h1>
+<p>This visual guide provides a comprehensive overview of SQLatte's user interface across all deployment modes.</p>
+<div class="admonition info">
+<p class="admonition-title">Screenshots Needed</p>
+<p>This page includes placeholder sections for screenshots. Add images to <code>/docs/assets/images/ui/</code> directory and reference them below.</p>
+</div>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>SQLatte offers three main interface modes:</p>
+<ol>
+<li><strong>Widget Mode</strong> - Embeddable chat interface</li>
+<li><strong>Unified Dashboard</strong> - Full-featured web application  </li>
+<li><strong>Admin Panel</strong> - Configuration and management</li>
+</ol>
+<hr />
+<h2 id="widget-interfaces">Widget Interfaces<a class="headerlink" href="#widget-interfaces" title="Permanent link">&para;</a></h2>
+<h3 id="standard-widget">Standard Widget<a class="headerlink" href="#standard-widget" title="Permanent link">&para;</a></h3>
+<p>The standard widget provides a simple chat interface with backend-configured database access.</p>
+<h4 id="badge-button">Badge Button<a class="headerlink" href="#badge-button" title="Permanent link">&para;</a></h4>
+<p><img alt="Standard Widget Badge" src="../assets/images/ui/standard-widget-badge.png" />
+<em>The coffee cup badge that opens the SQLatte widget (bottom-right by default)</em></p>
+<p><strong>Features:</strong>
+- Customizable position (bottom-left, bottom-right, top-left, top-right)
+- Responsive design
+- Hover state with tooltip
+- Matches your site's aesthetic</p>
+<h4 id="chat-modal">Chat Modal<a class="headerlink" href="#chat-modal" title="Permanent link">&para;</a></h4>
+<p><img alt="standard-widget-badge.png" src="../assets/images/ui/standard-widget.png" /></p>
+<p><em>Main chat interface showing conversation with SQLatte</em></p>
+<p><strong>Key Components:</strong></p>
+<ol>
+<li><strong>Header Bar</strong></li>
+<li>SQLatte logo and title</li>
+<li>Minimize/maximize controls</li>
+<li>Close button</li>
+<li>
+<p>Table selector dropdown</p>
+</li>
+<li>
+<p><strong>Chat Area</strong></p>
+</li>
+<li>Message history with conversation context</li>
+<li>User questions in blue bubbles</li>
+<li>SQLatte responses with SQL code blocks</li>
+<li>Syntax-highlighted SQL</li>
+<li>
+<p>Copy SQL button</p>
+</li>
+<li>
+<p><strong>Input Section</strong></p>
+</li>
+<li>Multi-line textarea</li>
+<li>Send button</li>
+<li>Placeholder text with examples</li>
+<li>
+<p>Enter to send (Shift+Enter for new line)</p>
+</li>
+<li>
+<p><strong>Toolbar</strong></p>
+</li>
+<li>History icon (view past queries)</li>
+<li>Favorites icon (saved queries)</li>
+<li>Chart icon (visualize results)</li>
+<li>Export CSV button</li>
+<li>Clear conversation</li>
+</ol>
+<h4 id="query-results">Query Results<a class="headerlink" href="#query-results" title="Permanent link">&para;</a></h4>
+<p><img alt="Query Results Display" src="../assets/images/ui/query_table.png" /></p>
+<p><em>SQL results displayed in a formatted table</em></p>
+<p><strong>Result Table Features:</strong>
+- Column headers with sorting
+- Responsive scrolling for large datasets
+- Row highlighting on hover
+- Copy individual cells
+- Click to chart icon</p>
+<h4 id="sql-code-display">SQL Code Display<a class="headerlink" href="#sql-code-display" title="Permanent link">&para;</a></h4>
+<p>![SQL Code Block]<img alt="query_code_block.png" src="../assets/images/ui/query_code_block.png" />
+<em>Syntax-highlighted SQL with copy button</em></p>
+<p><strong>Code Block Features:</strong>
+- Syntax highlighting (keywords, strings, numbers)
+- Line numbers
+- Copy to clipboard button
+- Execute again button
+- Dark theme for readability</p>
+<h4 id="chart-visualization">Chart Visualization<a class="headerlink" href="#chart-visualization" title="Permanent link">&para;</a></h4>
+<p><img alt="Chart Modal" src="../assets/images/ui/modal_chart.png" />
+<em>Interactive chart generated from query results</em></p>
+<p><strong>Chart Features:</strong>
+- Chart type selector (bar, line, pie, doughnut)
+- Metric selector for multi-column data
+- Responsive canvas
+- Chart.js powered visualizations
+- Download chart as image</p>
+<h4 id="history-panel">History Panel<a class="headerlink" href="#history-panel" title="Permanent link">&para;</a></h4>
+<p><img alt="History Panel" src="../assets/images/ui/history_panel.png" /></p>
+<p><em>Slide-out panel showing query history</em></p>
+<p><strong>History Panel Features:</strong>
+- Chronological list of queries
+- Question text preview
+- Timestamp
+- Re-run question button
+- Re-run SQL button
+- Add to favorites star icon
+- Clear all history button</p>
+<h4 id="favorites-panel">Favorites Panel<a class="headerlink" href="#favorites-panel" title="Permanent link">&para;</a></h4>
+<p><img alt="Favorites Panel" src="../assets/images/ui/favorites_panel.png" /></p>
+<p><em>Saved queries for quick access</em></p>
+<p><strong>Favorites Features:</strong>
+- Saved query list
+- Custom labels/names
+- Quick re-run
+- Remove from favorites
+- Persist across sessions (localStorage)</p>
+<hr />
+<h3 id="auth-widget">Auth Widget<a class="headerlink" href="#auth-widget" title="Permanent link">&para;</a></h3>
+<p>Multi-tenant widget with user authentication and per-user database connections.</p>
+<h4 id="login-modal">Login Modal<a class="headerlink" href="#login-modal" title="Permanent link">&para;</a></h4>
+<p><img alt="Auth Widget Login" src="../assets/images/ui/auth_login.png" /></p>
+<p><em>Login form for authenticated access</em></p>
+<p><strong>Login Form Fields:</strong>
+- Username
+- Password
+- Database Type (if multiple allowed)
+- Catalog (Trino-specific, if restricted)
+- Schema (if restricted)
+- Database info footer</p>
+<p><strong>Security Features:</strong>
+- Session-based authentication
+- Credential isolation per user
+- Configurable session TTL
+- Automatic logout on timeout</p>
+<h4 id="authenticated-chat">Authenticated Chat<a class="headerlink" href="#authenticated-chat" title="Permanent link">&para;</a></h4>
+<p><img alt="Auth Widget Chat" src="../assets/images/ui/auth_modal.png" /></p>
+<p><em>Chat interface after successful login</em></p>
+<p><strong>Differences from Standard Widget:</strong>
+- User indicator in header
+- Logout button
+- Session status indicator
+- User-specific history/favorites
+- Per-user table access</p>
+<h4 id="session-management">Session Management<a class="headerlink" href="#session-management" title="Permanent link">&para;</a></h4>
+<p><strong>Session Features:</strong>
+- Active session indicator
+- Time remaining display
+- Logout button
+- Session refresh on activity</p>
+<hr />
+<h2 id="unified-dashboard">Unified Dashboard<a class="headerlink" href="#unified-dashboard" title="Permanent link">&para;</a></h2>
+<p>The full-featured web application for comprehensive SQLatte access.</p>
+<h3 id="home-tab">Home Tab<a class="headerlink" href="#home-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Dashboard Home" src="../assets/images/img.png" />
+<em>Landing page with quick links and overview</em></p>
+<p><strong>Home Page Components:</strong>
+- Welcome message
+- Recent activity summary
+- Quick action buttons
+- Feature highlights
+- Status indicators (DB, LLM, services)</p>
+<h3 id="assistant-tab">Assistant Tab<a class="headerlink" href="#assistant-tab" title="Permanent link">&para;</a></h3>
+<p><strong>Features:</strong>
+- Full standard widget functionality
+- Integrated within dashboard layout
+- Sidebar navigation visible
+- Same features as standalone widget</p>
+<h3 id="demo-tab">Demo Tab<a class="headerlink" href="#demo-tab" title="Permanent link">&para;</a></h3>
+<p><em>Interactive demo and examples</em></p>
+<p><strong>Demo Page Elements:</strong>
+- Sample queries you can try
+- Pre-configured example database
+- Tutorial walkthrough
+- Feature showcase
+- Video tutorials (if available)</p>
+<h3 id="analytics-tab">Analytics Tab<a class="headerlink" href="#analytics-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Dashboard Analytics" src="../assets/images/ui/analytics.png" />
+<em>Query performance and usage metrics</em></p>
+<p><strong>Analytics Dashboard Sections:</strong></p>
+<ol>
+<li><strong>Overview Cards</strong></li>
+<li>Total queries executed</li>
+<li>Average execution time</li>
+<li>Success rate percentage</li>
+<li>
+<p>Active users count</p>
+</li>
+<li>
+<p><strong>Query Performance Chart</strong></p>
+</li>
+<li>Execution time trends</li>
+<li>Query volume over time</li>
+<li>Success/failure ratio</li>
+<li>
+<p>Filtering by time range</p>
+</li>
+<li>
+<p><strong>Top Queries Table</strong></p>
+</li>
+<li>Most frequently run queries</li>
+<li>Average execution time</li>
+<li>Success rate</li>
+<li>
+<p>Last execution timestamp</p>
+</li>
+<li>
+<p><strong>Insights Summary</strong></p>
+</li>
+<li>AI-generated insights count</li>
+<li>Most common insight types</li>
+<li>
+<p>Insights by category</p>
+</li>
+<li>
+<p><strong>Database Usage</strong></p>
+</li>
+<li>Tables most queried</li>
+<li>Schema access patterns</li>
+<li>Query complexity distribution</li>
+</ol>
+<h3 id="schedules-tab">Schedules Tab<a class="headerlink" href="#schedules-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Dashboard Schedules" src="../assets/images/ui/schedule.png" />
+<em>Scheduled query management interface</em></p>
+<p><strong>Schedule Management Features:</strong></p>
+<ol>
+<li><strong>Schedule List</strong></li>
+<li>All active and inactive schedules</li>
+<li>Frequency (daily, weekly, monthly)</li>
+<li>Next run time</li>
+<li>Status indicator</li>
+<li>
+<p>Edit/Delete buttons</p>
+</li>
+<li>
+<p><strong>Create Schedule Modal</strong></p>
+</li>
+<li>
+<p>Schedule name</p>
+</li>
+<li>Query/question selector</li>
+<li>Frequency picker (cron editor)</li>
+<li>Time selector</li>
+<li>Email recipients (multi-input)</li>
+<li>Format selector (CSV, Excel, HTML)</li>
+<li>
+<p>Custom email subject/body</p>
+</li>
+<li>
+<p><strong>Execution History</strong></p>
+</li>
+<li>Past execution logs</li>
+<li>Success/failure status</li>
+<li>Rows returned</li>
+<li>Execution duration</li>
+<li>Error messages (if failed)</li>
+<li>
+<p>Email delivery status</p>
+</li>
+<li>
+<p><strong>Email Preview</strong></p>
+</li>
+<li>Preview email template</li>
+<li>Test send to your email</li>
+<li>Attachment format preview</li>
+</ol>
+<h3 id="configuration-tab">Configuration Tab<a class="headerlink" href="#configuration-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Dashboard Config" src="../assets/images/ui/dashboard-config.png" />
+<em>Admin panel embedded in dashboard</em></p>
+<p><strong>Configuration Sections:</strong>
+- Full admin panel functionality
+- Provider settings
+- Prompts editor
+- Email/SMTP config
+- System info
+- All admin features accessible</p>
+<hr />
+<h2 id="admin-panel">Admin Panel<a class="headerlink" href="#admin-panel" title="Permanent link">&para;</a></h2>
+<p>Dedicated administration interface for configuration and management.</p>
+<h3 id="main-admin-interface">Main Admin Interface<a class="headerlink" href="#main-admin-interface" title="Permanent link">&para;</a></h3>
+<p><img alt="Admin Panel Overview" src="../assets/images/ui/admin-panel-overview.png" />
+<em>Admin panel landing page</em></p>
+<p><strong>Navigation Tabs:</strong>
+- Providers
+- Prompts
+- Email &amp; SMTP
+- Scheduler
+- Insights
+- Export
+- History
+- Snapshots</p>
+<h3 id="providers-tab">Providers Tab<a class="headerlink" href="#providers-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Admin Providers Tab" src="../assets/images/ui/admin-providers-tab.png" />
+<em>LLM and database provider configuration</em></p>
+<p><strong>LLM Provider Section:</strong>
+- Provider selector dropdown (Anthropic, Gemini, Vertex AI)
+- Model selector
+- API key input (masked)
+- Temperature slider
+- Max tokens input
+- Test connection button
+- Save button</p>
+<p><strong>Database Provider Section:</strong>
+- Provider selector (Trino, PostgreSQL, MySQL, BigQuery)
+- Host, port, database inputs
+- Username, password fields
+- Schema/catalog (provider-specific)
+- Test connection button
+- Connection status indicator</p>
+<p><strong>System Info Box:</strong>
+- Current LLM provider and model
+- Current database provider
+- Runtime overrides status
+- Hot reload capability status</p>
+<h3 id="prompts-tab">Prompts Tab<a class="headerlink" href="#prompts-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Admin Prompts Tab" src="../assets/images/ui/admin-prompts-tab.png" />
+<em>Runtime prompt editing interface</em></p>
+<p><strong>Prompt Editor Features:</strong></p>
+<ol>
+<li><strong>Prompt Selector</strong></li>
+<li>Intent Detection</li>
+<li>Barista Personality</li>
+<li>SQL Generation</li>
+<li>
+<p>Insights Generation</p>
+</li>
+<li>
+<p><strong>Editor Area</strong></p>
+</li>
+<li>Multi-line textarea</li>
+<li>Syntax highlighting</li>
+<li>Template variable hints</li>
+<li>Character count</li>
+<li>
+<p>Line numbers</p>
+</li>
+<li>
+<p><strong>Action Buttons</strong></p>
+</li>
+<li>Save prompt (to database)</li>
+<li>Reset to default</li>
+<li>Preview with sample</li>
+<li>
+<p>Copy to clipboard</p>
+</li>
+<li>
+<p><strong>Template Variables Helper</strong></p>
+</li>
+<li>Available variables list</li>
+<li>Click to insert</li>
+<li>Usage examples</li>
+</ol>
+<p><strong>Prompt Editing Flow:</strong>
+<img alt="Prompt Edit Flow" src="../assets/images/ui/admin-prompt-edit-flow.png" />
+<em>Step-by-step prompt customization</em></p>
+<h3 id="email-smtp-tab">Email &amp; SMTP Tab<a class="headerlink" href="#email-smtp-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Admin Email Tab" src="../assets/images/ui/admin-email-tab.png" />
+<em>Email service configuration</em></p>
+<p><strong>Email Configuration:</strong>
+- Enable/disable toggle
+- SMTP provider dropdown
+- SMTP host
+- SMTP port
+- Username
+- Password (masked)
+- From email address
+- From name
+- Use TLS toggle
+- Test email button (sends test)
+- Save configuration</p>
+<p><strong>Email Test Result:</strong>
+- Success/failure message
+- SMTP connection log
+- Delivery confirmation</p>
+<h3 id="scheduler-tab">Scheduler Tab<a class="headerlink" href="#scheduler-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Admin Scheduler Tab" src="../assets/images/ui/admin-scheduler-tab.png" />
+<em>Scheduler service configuration</em></p>
+<p><strong>Scheduler Settings:</strong>
+- Enable/disable toggle
+- Timezone selector
+- Max concurrent jobs
+- Job timeout (seconds)
+- Keep history days
+- Max executions per schedule</p>
+<p><strong>Global Schedule Management:</strong>
+- View all users' schedules (admin view)
+- Bulk enable/disable
+- Delete schedules
+- Execution logs across all users</p>
+<h3 id="insights-tab">Insights Tab<a class="headerlink" href="#insights-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Admin Insights Tab" src="../assets/images/ui/admin-insights-tab.png" />
+<em>Insights engine configuration</em></p>
+<p><strong>Insights Settings:</strong>
+- Enable/disable toggle
+- Mode selector (LLM only, Statistical only, Hybrid)
+- Max insights per query
+- Include statistical insights toggle
+- Insight categories selector</p>
+<h3 id="export-tab">Export Tab<a class="headerlink" href="#export-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Admin Export Tab" src="../assets/images/ui/admin-export-tab.png" />
+<em>Export format configuration</em></p>
+<p><strong>Export Settings:</strong>
+- Enabled formats (CSV, Excel, HTML)
+- Max rows limit
+- Max file size (MB)
+- Filename template
+- Add/remove formats</p>
+<h3 id="history-tab">History Tab<a class="headerlink" href="#history-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Admin History Tab" src="../assets/images/ui/admin-history-tab.png" />
+<em>Configuration change history</em></p>
+<p><strong>Change Log:</strong>
+- Timestamp
+- Configuration key changed
+- Old value → New value
+- Changed by (user/admin)
+- Revert button (if supported)</p>
+<p><strong>Filtering:</strong>
+- Date range picker
+- Configuration section filter
+- Search by key name</p>
+<h3 id="snapshots-tab">Snapshots Tab<a class="headerlink" href="#snapshots-tab" title="Permanent link">&para;</a></h3>
+<p><img alt="Admin Snapshots Tab" src="../assets/images/ui/admin-snapshots-tab.png" />
+<em>Configuration backup and restore</em></p>
+<p><strong>Snapshot Management:</strong>
+- Create snapshot button
+- Snapshot list with timestamps
+- Snapshot name/description
+- Restore snapshot button
+- Download snapshot (JSON/YAML)
+- Delete snapshot</p>
+<p><strong>Snapshot Flow:</strong>
+<img alt="Snapshot Creation" src="../assets/images/ui/admin-snapshot-flow.png" />
+<em>Creating and restoring configuration snapshots</em></p>
+<hr />
+<h2 id="responsive-design">Responsive Design<a class="headerlink" href="#responsive-design" title="Permanent link">&para;</a></h2>
+<p>SQLatte's UI is fully responsive across devices.</p>
+<h3 id="desktop-view">Desktop View<a class="headerlink" href="#desktop-view" title="Permanent link">&para;</a></h3>
+<p><img alt="Desktop Layout" src="../assets/images/ui/responsive-desktop.png" />
+<em>Full desktop experience with sidebar navigation</em></p>
+<p><strong>Desktop Features:</strong>
+- Multi-column layouts
+- Expanded tables
+- Side-by-side panels
+- Full-width charts</p>
+<h3 id="tablet-view">Tablet View<a class="headerlink" href="#tablet-view" title="Permanent link">&para;</a></h3>
+<p><img alt="Tablet Layout" src="../assets/images/ui/responsive-tablet.png" />
+<em>Optimized for tablet screens</em></p>
+<p><strong>Tablet Adaptations:</strong>
+- Collapsible sidebar
+- Single-column layouts
+- Touch-friendly buttons
+- Responsive tables</p>
+<h3 id="mobile-view">Mobile View<a class="headerlink" href="#mobile-view" title="Permanent link">&para;</a></h3>
+<p><img alt="Mobile Layout" src="../assets/images/ui/responsive-mobile.png" />
+<em>Mobile-optimized interface</em></p>
+<p><strong>Mobile Features:</strong>
+- Hamburger menu
+- Stacked layouts
+- Swipe gestures
+- Bottom navigation
+- Optimized input fields</p>
+<hr />
+<h2 id="dark-theme">Dark Theme<a class="headerlink" href="#dark-theme" title="Permanent link">&para;</a></h2>
+<p>SQLatte features a coffee-inspired dark theme across all interfaces.</p>
+<h3 id="widget-dark-theme">Widget Dark Theme<a class="headerlink" href="#widget-dark-theme" title="Permanent link">&para;</a></h3>
+<p><img alt="Widget Dark Theme" src="../assets/images/ui/widget-dark-theme.png" />
+<em>Dark theme widget with coffee brown accents</em></p>
+<p><strong>Color Palette:</strong>
+- Background: <code>#1a1a1a</code>
+- Primary: <code>#D4A574</code> (coffee brown)
+- Secondary: <code>#6B4423</code> (dark coffee)
+- Text: <code>#e0e0e0</code>
+- Code blocks: <code>#0f0f0f</code></p>
+<h3 id="dashboard-dark-theme">Dashboard Dark Theme<a class="headerlink" href="#dashboard-dark-theme" title="Permanent link">&para;</a></h3>
+<p><img alt="Dashboard Dark Theme" src="../assets/images/ui/dashboard-dark-theme.png" />
+<em>Dark theme dashboard</em></p>
+<p><strong>Consistent Theming:</strong>
+- Same color palette
+- Syntax highlighting
+- Chart colors
+- Button states</p>
+<hr />
+<h2 id="accessibility-features">Accessibility Features<a class="headerlink" href="#accessibility-features" title="Permanent link">&para;</a></h2>
+<p>SQLatte is designed with accessibility in mind.</p>
+<h3 id="keyboard-navigation">Keyboard Navigation<a class="headerlink" href="#keyboard-navigation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tab navigation through all interactive elements</li>
+<li>Enter to submit forms</li>
+<li>Escape to close modals</li>
+<li>Arrow keys for dropdown navigation</li>
+<li>Shortcuts for common actions</li>
+</ul>
+<h3 id="screen-reader-support">Screen Reader Support<a class="headerlink" href="#screen-reader-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ARIA labels on all controls</li>
+<li>Semantic HTML structure</li>
+<li>Alt text for images</li>
+<li>Descriptive link text</li>
+</ul>
+<h3 id="visual-accessibility">Visual Accessibility<a class="headerlink" href="#visual-accessibility" title="Permanent link">&para;</a></h3>
+<ul>
+<li>High contrast ratios (WCAG AA compliant)</li>
+<li>Resizable text</li>
+<li>Focus indicators</li>
+<li>Color-blind friendly palette</li>
+</ul>
+<hr />
+<h2 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">&para;</a></h2>
+<h3 id="widget-styling">Widget Styling<a class="headerlink" href="#widget-styling" title="Permanent link">&para;</a></h3>
+<p>Customize widget appearance via configuration:</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">window</span><span class="p">.</span><span class="nx">SQLatteWidget</span><span class="p">.</span><span class="nx">configure</span><span class="p">({</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;bottom-right&#39;</span><span class="p">,</span><span class="w">  </span><span class="c1">// bottom-left, top-right, top-left</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nx">fullscreen</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Custom Title ☕&#39;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nx">placeholder</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Ask your data...&#39;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nx">primaryColor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#D4A574&#39;</span><span class="p">,</span><span class="w">   </span><span class="c1">// Custom accent color</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nx">darkMode</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">});</span>
+</span></code></pre></div>
+<h3 id="dashboard-theming">Dashboard Theming<a class="headerlink" href="#dashboard-theming" title="Permanent link">&para;</a></h3>
+<p>Modify dashboard colors via CSS variables:</p>
+<div class="language-css highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nv">--sqlatte-primary</span><span class="p">:</span><span class="w"> </span><span class="mh">#D4A574</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nv">--sqlatte-secondary</span><span class="p">:</span><span class="w"> </span><span class="mh">#6B4423</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nv">--sqlatte-background</span><span class="p">:</span><span class="w"> </span><span class="mh">#1a1a1a</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nv">--sqlatte-text</span><span class="p">:</span><span class="w"> </span><span class="mh">#e0e0e0</span><span class="p">;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="ui-best-practices">UI Best Practices<a class="headerlink" href="#ui-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="query-input">Query Input<a class="headerlink" href="#query-input" title="Permanent link">&para;</a></h3>
+<p><strong>Good Examples:</strong>
+- "Show me top 10 customers by revenue"
+- "What's the average order value last month?"
+- "List products with low stock"</p>
+<p><strong>Tips:</strong>
+- Be specific about time ranges
+- Mention table names if known
+- Use natural language
+- Ask follow-up questions</p>
+<h3 id="interpreting-results">Interpreting Results<a class="headerlink" href="#interpreting-results" title="Permanent link">&para;</a></h3>
+<p><strong>Understanding SQL Output:</strong>
+- Column headers match your question
+- Row count indicates data volume
+- Scroll for more results
+- Export for external analysis</p>
+<p><strong>Using Charts:</strong>
+- Click chart icon on numeric results
+- Select appropriate chart type
+- Choose metric for multi-column data
+- Download for presentations</p>
+<h3 id="managing-history">Managing History<a class="headerlink" href="#managing-history" title="Permanent link">&para;</a></h3>
+<p><strong>Organization:</strong>
+- Star frequently-used queries
+- Clear old history periodically
+- Use descriptive names for schedules</p>
+<hr />
+<h2 id="troubleshooting-ui-issues">Troubleshooting UI Issues<a class="headerlink" href="#troubleshooting-ui-issues" title="Permanent link">&para;</a></h2>
+<h3 id="widget-not-loading">Widget Not Loading<a class="headerlink" href="#widget-not-loading" title="Permanent link">&para;</a></h3>
+<p><strong>Check:</strong>
+- JavaScript console for errors
+- Network tab for failed requests
+- CORS configuration
+- API endpoint accessibility</p>
+<h3 id="slow-performance">Slow Performance<a class="headerlink" href="#slow-performance" title="Permanent link">&para;</a></h3>
+<p><strong>Optimize:</strong>
+- Limit result rows
+- Use specific queries
+- Enable query caching
+- Check database performance</p>
+<h3 id="display-issues">Display Issues<a class="headerlink" href="#display-issues" title="Permanent link">&para;</a></h3>
+<p><strong>Fix:</strong>
+- Clear browser cache
+- Try different browser
+- Disable browser extensions
+- Check CSS conflicts</p>
+<hr />
+<h2 id="video-tutorials">Video Tutorials<a class="headerlink" href="#video-tutorials" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Video Coming Soon</p>
+<p>Video walkthroughs will be added to demonstrate:
+- First-time setup
+- Creating schedules
+- Using the admin panel
+- Embedding widgets</p>
+</div>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Now that you understand the UI:</p>
+<ul>
+<li><strong>Try the widget</strong>: <a href="../widgets/embedding/">Embedding Guide</a></li>
+<li><strong>Explore features</strong>: <a href="../features/schedules/">Scheduled Queries</a></li>
+<li><strong>Customize prompts</strong>: <a href="../features/runtime-prompts/">Runtime Prompts</a></li>
+<li><strong>Configure settings</strong>: <a href="../configuration/overview/">Configuration Overview</a></li>
+</ul>
+<hr />
+<p><strong>Need help?</strong> Check the <a href="https://github.com/osmanuygar/sqlatte/issues">GitHub Issues</a> or create a new issue with screenshots of your problem.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 10, 2026 14:06:50 UTC">February 10, 2026</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 10, 2026 14:06:50 UTC">February 10, 2026</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/osmanuygar/sqlatte" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "search.share", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
