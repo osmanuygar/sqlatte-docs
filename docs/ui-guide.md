@@ -291,7 +291,8 @@ The full-featured web application for comprehensive SQLatte access.
 
 ### Configuration Tab
 
-![Dashboard Config](../assets/images/ui/dashboard-config.png)
+![Dashboard Config](assets/images/ui/configurations.png)
+
 *Admin panel embedded in dashboard*
 
 **Configuration Sections:**
@@ -310,7 +311,7 @@ Dedicated administration interface for configuration and management.
 
 ### Main Admin Interface
 
-![Admin Panel Overview](../assets/images/ui/admin-panel-overview.png)
+![Admin Panel Overview](assets/images/ui/conf_nav.png)
 *Admin panel landing page*
 
 **Navigation Tabs:**
@@ -325,7 +326,7 @@ Dedicated administration interface for configuration and management.
 
 ### Providers Tab
 
-![Admin Providers Tab](../assets/images/ui/admin-providers-tab.png)
+![Admin Providers Tab](assets/images/ui/providers.png)
 *LLM and database provider configuration*
 
 **LLM Provider Section:**
@@ -353,7 +354,7 @@ Dedicated administration interface for configuration and management.
 
 ### Prompts Tab
 
-![Admin Prompts Tab](../assets/images/ui/admin-prompts-tab.png)
+![Admin Prompts Tab](assets/images/ui/prompts.png)
 *Runtime prompt editing interface*
 
 **Prompt Editor Features:**
@@ -382,13 +383,10 @@ Dedicated administration interface for configuration and management.
    - Click to insert
    - Usage examples
 
-**Prompt Editing Flow:**
-![Prompt Edit Flow](../assets/images/ui/admin-prompt-edit-flow.png)
-*Step-by-step prompt customization*
 
 ### Email & SMTP Tab
 
-![Admin Email Tab](../assets/images/ui/admin-email-tab.png)
+![Admin Email Tab](assets/images/ui/emails.png)
 *Email service configuration*
 
 **Email Configuration:**
@@ -411,7 +409,7 @@ Dedicated administration interface for configuration and management.
 
 ### Scheduler Tab
 
-![Admin Scheduler Tab](../assets/images/ui/admin-scheduler-tab.png)
+![Admin Scheduler Tab](assets/images/ui/scheduler.png)
 *Scheduler service configuration*
 
 **Scheduler Settings:**
@@ -430,7 +428,7 @@ Dedicated administration interface for configuration and management.
 
 ### Insights Tab
 
-![Admin Insights Tab](../assets/images/ui/admin-insights-tab.png)
+![Admin Insights Tab](assets/images/ui/insight.png)
 *Insights engine configuration*
 
 **Insights Settings:**
@@ -442,7 +440,8 @@ Dedicated administration interface for configuration and management.
 
 ### Export Tab
 
-![Admin Export Tab](../assets/images/ui/admin-export-tab.png)
+![Admin Export Tab](assets/images/ui/export.png)
+
 *Export format configuration*
 
 **Export Settings:**
@@ -454,7 +453,6 @@ Dedicated administration interface for configuration and management.
 
 ### History Tab
 
-![Admin History Tab](../assets/images/ui/admin-history-tab.png)
 *Configuration change history*
 
 **Change Log:**
@@ -471,7 +469,7 @@ Dedicated administration interface for configuration and management.
 
 ### Snapshots Tab
 
-![Admin Snapshots Tab](../assets/images/ui/admin-snapshots-tab.png)
+![Admin Snapshots Tab](assets/images/ui/snapshot.png)
 *Configuration backup and restore*
 
 **Snapshot Management:**
@@ -482,78 +480,6 @@ Dedicated administration interface for configuration and management.
 - Download snapshot (JSON/YAML)
 - Delete snapshot
 
-**Snapshot Flow:**
-![Snapshot Creation](../assets/images/ui/admin-snapshot-flow.png)
-*Creating and restoring configuration snapshots*
-
----
-
-## Responsive Design
-
-SQLatte's UI is fully responsive across devices.
-
-### Desktop View
-
-![Desktop Layout](../assets/images/ui/responsive-desktop.png)
-*Full desktop experience with sidebar navigation*
-
-**Desktop Features:**
-- Multi-column layouts
-- Expanded tables
-- Side-by-side panels
-- Full-width charts
-
-### Tablet View
-
-![Tablet Layout](../assets/images/ui/responsive-tablet.png)
-*Optimized for tablet screens*
-
-**Tablet Adaptations:**
-- Collapsible sidebar
-- Single-column layouts
-- Touch-friendly buttons
-- Responsive tables
-
-### Mobile View
-
-![Mobile Layout](../assets/images/ui/responsive-mobile.png)
-*Mobile-optimized interface*
-
-**Mobile Features:**
-- Hamburger menu
-- Stacked layouts
-- Swipe gestures
-- Bottom navigation
-- Optimized input fields
-
----
-
-## Dark Theme
-
-SQLatte features a coffee-inspired dark theme across all interfaces.
-
-### Widget Dark Theme
-
-![Widget Dark Theme](../assets/images/ui/widget-dark-theme.png)
-*Dark theme widget with coffee brown accents*
-
-**Color Palette:**
-- Background: `#1a1a1a`
-- Primary: `#D4A574` (coffee brown)
-- Secondary: `#6B4423` (dark coffee)
-- Text: `#e0e0e0`
-- Code blocks: `#0f0f0f`
-
-### Dashboard Dark Theme
-
-![Dashboard Dark Theme](../assets/images/ui/dashboard-dark-theme.png)
-*Dark theme dashboard*
-
-**Consistent Theming:**
-- Same color palette
-- Syntax highlighting
-- Chart colors
-- Button states
 
 ---
 
