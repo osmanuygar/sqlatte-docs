@@ -499,25 +499,30 @@ class CustomLLMProvider(LLMProvider):
 ### Planned Features
 
 1. **Distributed Sessions**
+
    - Redis-backed conversation storage
    - Shared sessions across instances
 
 2. **Advanced Caching**
+
    - Query result caching (Redis)
    - Semantic similarity matching
    - Deduplicate identical queries
 
 3. **Webhooks & Integrations**
+
    - Slack plugin
    - MS Teams plugin
    - Custom webhook endpoints
 
 4. **Advanced Auth**
+
    - OAuth2 support
    - SAML integration
    - RBAC (Role-Based Access Control)
 
 5. **Query Optimization**
+
    - Query plan analysis
    - Automatic index suggestions
    - Partition recommendation engine

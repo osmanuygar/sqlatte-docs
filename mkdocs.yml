@@ -79,7 +79,7 @@ nav:
   
   - Configuration:
     - Overview: configuration/overview.md
-    - config.yaml Reference: configuration/config-yaml.md
+    - Full Config Reference: configuration/config-yaml.md
     - Database Providers: configuration/database-providers.md
     - LLM Providers: configuration/llm-providers.md
     - Analytics Setup: configuration/analytics.md
@@ -87,12 +87,6 @@ nav:
   
   - User Interface:
     - UI Guide & Screenshots: ui-guide.md
-  
-  - Widgets:
-    - Widget Types: widgets/overview.md
-    - Standard Widget: widgets/standard.md
-    - Auth Widget: widgets/auth.md
-    - Embedding Guide: widgets/embedding.md
   
   - Features:
     - Dashboard: features/dashboard.md
@@ -104,15 +98,10 @@ nav:
   - API Reference:
     - REST Endpoints: api/endpoints.md
     - WebSocket API: api/websocket.md
-  
-  - Examples:
-    - Basic Queries: examples/basic.md
-    - Complex Queries: examples/complex.md
-    - Schedule Examples: examples/schedules.md
-  
+
   - Architecture:
-    - Design Principles: architecture/principles.md
     - System Overview: architecture/overview.md
+    - Design Principles: architecture/principles.md
 
 extra:
   social:

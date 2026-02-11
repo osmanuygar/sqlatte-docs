@@ -31,13 +31,6 @@ SQLatte is an AI-powered natural language to SQL analytics platform that combine
 
     [:octicons-arrow-right-24: Configuration Guide](configuration/overview.md)
 
--   :material-widgets:{ .lg .middle } __Embed Widgets__
-
-    ---
-
-    Add SQLatte to your applications (standard or auth mode)
-
-    [:octicons-arrow-right-24: Widget Guide](widgets/overview.md)
 
 -   :material-chart-line:{ .lg .middle } __Features__
 

@@ -676,7 +676,6 @@ Modify dashboard colors via CSS variables:
 
 Now that you understand the UI:
 
-- **Try the widget**: [Embedding Guide](widgets/embedding.md)
 - **Explore features**: [Scheduled Queries](features/schedules.md)
 - **Customize prompts**: [Runtime Prompts](features/runtime-prompts.md)
 - **Configure settings**: [Configuration Overview](configuration/overview.md)

@@ -1,3 +1,0 @@
-# Schedules
-
-Documentation coming soon.

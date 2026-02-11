@@ -1,3 +1,0 @@
-# Basic
-
-Documentation coming soon.

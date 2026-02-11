@@ -867,7 +867,6 @@ Check the [Changelog](https://github.com/osmanuygar/sqlatte/blob/main/CHANGELOG.
     - Store credentials in environment variables or secrets manager
     - Enable authentication if exposing publicly
     - Configure CORS appropriately
-    - Review [Security Best Practices](../architecture/security.md)
 
 ## Getting Help
 

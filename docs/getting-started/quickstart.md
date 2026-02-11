@@ -237,10 +237,9 @@ and email results to your@email.com
 Now that you've run your first queries:
 
 1. **Explore Configuration** - Customize SQLatte's behavior in [Configuration Guide](../configuration/overview.md)
-2. **Learn Widget Options** - Embed SQLatte in your apps with [Widget Guide](../widgets/overview.md)
-3. **Set Up Scheduling** - Automate reports with [Scheduled Queries](../features/schedules.md)
-4. **Enable Analytics** - Track usage with [Analytics Dashboard](../features/analytics.md)
-5. **Customize AI Behavior** - Use [Runtime Prompts](../features/runtime-prompts.md)
+2**Set Up Scheduling** - Automate reports with [Scheduled Queries](../features/schedules.md)
+3**Enable Analytics** - Track usage with [Analytics Dashboard](../features/analytics.md)
+4**Customize AI Behavior** - Use [Runtime Prompts](../features/runtime-prompts.md)
 
 ## Troubleshooting First Queries
 
@@ -320,7 +319,6 @@ If you get stuck:
 - Check the **generated SQL** to understand what query was created
 - Try rephrasing your question
 - Be more specific about table and column names
-- Look at the [Examples](../examples/basic.md) for inspiration
 - Open an issue on [GitHub](https://github.com/osmanuygar/sqlatte/issues)
 
 Happy querying! ☕
