@@ -210,16 +210,21 @@ plugins:
     db_host: "trino.company.com"
     db_port: 443
     
-    # Catalog/Schema restrictions (empty = allow all)
+    # Catalog/Schema Restrictions
+    # If empty lists, all catalogs/schemas are allowed
+    # If filled, only these will be available in login form
     allowed_catalogs:
-      # - "hive"
-      # - "iceberg"
-    allowed_schemas:
-      # - "default"
-      # - "production"
+      - name: "hive"
+        allowed_schemas: ["edr", "hive"]
+      - name: "network"
+        allowed_schemas: [ "cloudflare" ]
+      - name: "mongo_stores_db"
+        allowed_schemas: [ "mongo" ]
+      
+    # Database Type Restrictions
     allowed_db_types:
-      # - "trino"
-      # - "postgresql"
+      - "trino"
+
 
 # ============================================
 # PROMPTS CONFIGURATION
@@ -631,13 +636,18 @@ plugins:
     db_host: "trino.company.com"
     db_port: 443
     
-    # Restrictions (empty arrays = allow all)
+    # Catalog/Schema Restrictions
+    # If empty lists, all catalogs/schemas are allowed
+    # If filled, only these will be available in login form
     allowed_catalogs:
-      - "hive"
-      - "iceberg"
-    allowed_schemas:
-      - "default"
-      - "production"
+      - name: "hive"
+        allowed_schemas: ["edr", "hive"]
+      - name: "network"
+        allowed_schemas: [ "cloudflare" ]
+      - name: "mongo_stores_db"
+        allowed_schemas: [ "mongo" ]
+
+    # Database Type Restrictions
     allowed_db_types:
       - "trino"
 ```
