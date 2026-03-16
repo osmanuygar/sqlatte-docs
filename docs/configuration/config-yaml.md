@@ -181,7 +181,7 @@ insights:
 # Optional: Store query history, analytics, and configurations
 analytics:
   enabled: false               # Enable analytics tracking
-  storage: "memory"            # Options: memory, postgresql
+  storage: "postgresql"            # Options: memory, postgresql
   
   # PostgreSQL storage (if storage=postgresql)
   postgresql:
@@ -194,6 +194,24 @@ analytics:
   # Retention settings
   query_history_days: 90       # Keep query history for 90 days
   execution_logs_days: 30      # Keep execution logs for 30 days
+
+config_db:
+  enabled: false
+  type: postgresql  # or sqlite
+
+  postgresql:
+    host: localhost
+    database: sqlatte_config
+    user: "sqlatte"
+    password: "sqlatte"
+
+  encryption_key: "******"
+
+# Admin login page
+admin:
+  enabled: true
+  username: "admin"
+  password: "admin!"
 
 # ============================================
 # PLUGIN SYSTEM
