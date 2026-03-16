@@ -85,6 +85,7 @@ nav:
     - Database Providers: configuration/database-providers.md
     - LLM Providers: configuration/llm-providers.md
     - Analytics Setup: configuration/analytics.md
+    - Dashboard Customization: configuration/dashboard.md
     - Email Settings: configuration/email.md
 
   - User Interface:
