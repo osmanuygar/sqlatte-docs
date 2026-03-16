@@ -95,6 +95,7 @@ nav:
     - Dashboard: features/dashboard.md
     - Scheduled Queries: features/schedules.md
     - Analytics & Insights: features/analytics.md
+    - Semantic Layer: features/semantic-layer.md
     - Runtime Prompts: features/runtime-prompts.md
     - Barista Personality: features/barista.md
 
