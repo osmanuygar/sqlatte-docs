@@ -1,289 +1,91 @@
 # LLM Providers
 
-SQLatte supports three LLM providers. Configure one in `config.yaml`:
-
-```yaml
-llm:
-  provider: "anthropic"  # anthropic, gemini, vertex
-```
-
----
+SQLatte supports three LLM providers, selected via `llm.provider`.
 
 ## Anthropic Claude (Recommended)
-
-**Best for:** SQL generation, complex reasoning, highest quality
 
 ```yaml
 llm:
   provider: "anthropic"
   anthropic:
-    api_key: "sk-ant-xxxxx"
-    model: "claude-sonnet-4-20250514"    # Recommended
+    api_key: "sk-ant-your-key-here"
+    model: "claude-sonnet-4-20250514"
     max_tokens: 4096
-    temperature: 0.0                      # Deterministic (best for SQL)
-    timeout: 60
 ```
 
-### Models
-
-| Model | Best For | Speed | Cost |
-|-------|----------|-------|------|
-| `claude-sonnet-4-20250514` | Balanced (recommended) | Fast | $$ |
-| `claude-opus-4-20250514` | Highest quality | Slow | $$$ |
-| `claude-haiku-4-20250316` | Simple queries | Fastest | $ |
-
-### Getting API Key
-
-1. Visit [console.anthropic.com](https://console.anthropic.com)
-2. Sign up / Log in
-3. Go to **API Keys**
-4. Click **Create Key**
-5. Copy `sk-ant-xxxxx`
-6. Add to config.yaml
-
-**Pricing:** Pay-as-you-go, ~$3 per 1M input tokens (Sonnet)
-
----
+Default and most capable — any Claude model (Opus, Sonnet, Haiku) is supported by name.
 
 ## Google Gemini
-
-**Best for:** Free tier, fast responses, Google ecosystem
 
 ```yaml
 llm:
   provider: "gemini"
   gemini:
-    api_key: "your-gemini-api-key"
-    model: "gemini-2.0-flash-exp"         # Latest model
-    max_tokens: 4096
-    temperature: 0.0
+    api_key: "your-gemini-key"
+    model: "gemini-pro"
+    max_tokens: 1000
 ```
 
-### Getting API Key
-
-1. Visit [makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
-2. Sign in with Google account
-3. Click **Create API Key**
-4. Copy key
-5. Add to config.yaml
-
-**Free Tier:** 60 requests/minute, 1,500 requests/day
-
-**Pricing:** Free tier available, then pay-as-you-go
-
----
+Free tier available — good for evaluation.
 
 ## Google Vertex AI
 
-**Best for:** Enterprise GCP deployments, production scale
-
 ```yaml
 llm:
-  provider: "vertex"
-  vertex:
+  provider: "vertexai"
+  vertexai:
     project_id: "my-gcp-project"
-    location: "us-central1"               # or europe-west1, asia-northeast1
-    model: "gemini-2.0-flash-exp"
+    location: "europe-west1"
+    model: "gemini-2.5-pro"
     credentials_path: "/path/to/service-account.json"
-    max_tokens: 4096
-    temperature: 0.0
+    # or inline for containers: credentials_json: "..."
 ```
 
-### Service Account Setup
+Enterprise GCP path — uses service-account auth rather than an API key, and is the only provider with built-in per-task `model_routing` in the sample config (though `model_routing` works the same way regardless of which provider block it's nested under or set at top level).
 
-1. **Create Service Account:**
-   ```bash
-   # GCP Console → IAM & Admin → Service Accounts
-   ```
+## Task-Based Model Routing
 
-2. **Grant Permissions:**
-   - `Vertex AI User`
-   - `Service Account Token Creator`
+Route each task to a different model to balance cost and accuracy — cheap/fast models for classification, capable models for actual SQL generation:
 
-3. **Download JSON Key:**
-   ```bash
-   # Keys → Add Key → JSON
-   # Save to /path/to/service-account.json
-   ```
-
-4. **Enable Vertex AI API:**
-   ```bash
-   gcloud services enable aiplatform.googleapis.com
-   ```
-
-**Pricing:** Enterprise pricing, similar to Gemini API
-
----
-
-## Comparison
-
-| Feature | Anthropic Claude | Google Gemini | Vertex AI |
-|---------|-----------------|---------------|-----------|
-| **Quality (SQL)** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
-| **Speed** | Fast | Very Fast | Fast |
-| **Cost** | $$ | $ (free tier) | $$ |
-| **Setup** | Easy | Easiest | Complex |
-| **Free Tier** | No | Yes | No |
-| **Best For** | Production | Testing/Free | Enterprise GCP |
-
----
-
-## Model Parameters
-
-### Temperature
 ```yaml
-temperature: 0.0   # Deterministic (recommended for SQL)
-temperature: 0.5   # Balanced
-temperature: 1.0   # Creative (not recommended for SQL)
+model_routing:
+  enabled: true
+  tasks:
+    intent_detection:
+      provider: "anthropic"
+      model: "claude-haiku-3-5-20241022"
+      max_tokens: 500
+    sql_generation:
+      provider: "anthropic"
+      model: "claude-sonnet-4-20250514"
+      max_tokens: 4096
+    insights:
+      provider: "anthropic"
+      model: "claude-sonnet-4-20250514"
+      max_tokens: 2000
+    chat:
+      provider: "anthropic"
+      model: "claude-haiku-3-5-20241022"
+      max_tokens: 1000
 ```
 
-**Recommendation:** Always use `0.0` for SQL generation to ensure consistent queries.
+Or, nested under `llm.vertexai.model_routing` for a single-provider shorthand:
 
-### Max Tokens
 ```yaml
-max_tokens: 4096   # Standard (recommended)
-max_tokens: 8192   # For complex queries with large schemas
-```
-
-### Timeout
-```yaml
-timeout: 60        # Default (60 seconds)
-timeout: 120       # For complex queries
-```
-
----
-
-## Testing LLM Connection
-
-```bash
-# Via Admin Panel
-http://localhost:8000/admin
-# → Providers tab → Test LLM button
-
-# Via API
-curl http://localhost:8000/health
-# Check: "llm": "available"
-```
-
----
-
-## Switching Providers
-
-Change LLM provider in real-time:
-
-**Option 1: Config File**
-```yaml
-# Edit config.yaml
 llm:
-  provider: "gemini"  # Changed from anthropic
+  vertexai:
+    model_routing:
+      intent_detection: "gemini-2.5-flash"
+      chat: "gemini-2.5-flash"
+      sql: "gemini-2.5-pro"
+      insights: "gemini-2.5-flash"
+      ops_insights: "gemini-2.5-flash"
 ```
 
-**Option 2: Admin Panel**
-```
-http://localhost:8000/admin
-→ Providers tab
-→ Select LLM provider
-→ Save
-→ Hot reload (no restart needed!)
-```
+Tasks not explicitly routed fall back to the top-level `llm.provider`/model.
 
----
-
-## Cost Optimization
-
-### Use Cheaper Models for Simple Queries
-```yaml
-# For simple queries, use Haiku (Anthropic) or Gemini free tier
-```
-
-### Adjust Token Limits
-```yaml
-max_tokens: 2048   # Reduce if queries are simple
-```
-
-### Cache Prompts (Future)
-```python
-# Cache common schema descriptions
-# Reuse prompt templates
-```
-
----
-
-## Troubleshooting
-
-### Invalid API Key
-```bash
-# Error: 401 Unauthorized
-# - Verify API key is correct
-# - Check key hasn't expired
-# - Ensure no extra spaces in config.yaml
-```
-
-### Rate Limit Exceeded
-```bash
-# Error: 429 Too Many Requests
-# - Reduce request frequency
-# - Upgrade to paid tier
-# - Use different model
-```
-
-### Model Not Found
-```bash
-# Error: 404 Model not found
-# - Check model name spelling
-# - Verify model is available in your region
-# - Use latest model names
-```
-
-### Timeout
-```bash
-# Error: Request timeout
-# - Increase timeout in config
-# - Simplify query/schema
-# - Use faster model (Haiku, Gemini Flash)
-```
-
----
-
-## Best Practices
-
-### For Production
-- ✅ Use **Claude Sonnet 4** for best SQL quality
-- ✅ Set `temperature: 0.0` for deterministic results
-- ✅ Monitor API costs with usage limits
-- ✅ Use environment variables for API keys
-
-### For Development
-- ✅ Use **Gemini free tier** for testing
-- ✅ Test with sample queries before production
-- ✅ Validate generated SQL before execution
-
-### For Enterprise
-- ✅ Use **Vertex AI** for GCP integration
-- ✅ Set up service account with minimal permissions
-- ✅ Enable audit logging
-- ✅ Use VPC for network isolation
-
----
-
-## Environment Variables
-
-Store API keys securely:
-
-```bash
-# .env file (don't commit!)
-ANTHROPIC_API_KEY=sk-ant-xxxxx
-GEMINI_API_KEY=your-gemini-key
-```
-
-```yaml
-# config.yaml
-llm:
-  provider: "anthropic"
-  anthropic:
-    api_key: "${ANTHROPIC_API_KEY}"  # From environment
-```
-
----
-
-**Next:** [Analytics Setup](analytics.md) | [Full Config Reference](config-yaml.md)
+| Provider | Models | Notes |
+|---|---|---|
+| Anthropic Claude | Opus, Sonnet, Haiku | Default; all models supported |
+| Google Gemini | gemini-pro and newer | Free tier available |
+| Google Vertex AI | gemini-pro and newer | Enterprise GCP, service-account auth |

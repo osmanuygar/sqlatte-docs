@@ -1,546 +1,148 @@
 # REST API Endpoints
 
-Complete reference for SQLatte's REST API.
-
----
-
-## Base URL
-
-```
-http://localhost:8000
-```
-
----
-
-## Authentication
-
-### Standard Widget (No Auth)
-
-No authentication required - uses backend config credentials.
-
-```bash
-curl http://localhost:8000/api/query
-```
-
----
-
-### Auth Widget (Session-Based)
-
-Requires login and session ID in headers.
-
-**1. Login:**
-```bash
-curl -X POST http://localhost:8000/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{
-    "username": "user@company.com",
-    "password": "password",
-    "database_type": "trino",
-    "host": "trino.company.com",
-    "catalog": "hive"
-  }'
-
-# Response:
-{
-  "session_id": "abc123...",
-  "username": "user@company.com"
-}
-```
-
-**2. Use session ID:**
-```bash
-curl http://localhost:8000/auth/query \
-  -H "X-Session-ID: abc123..."
-```
-
----
-
-## Core Endpoints
-
-### Query Execution
-
-#### POST /api/query
-
-Execute natural language query (standard widget).
-
-**Request:**
-```bash
-curl -X POST http://localhost:8000/api/query \
-  -H "Content-Type: application/json" \
-  -d '{
-    "question": "Show me top 10 customers by revenue",
-    "schema": "Table: customers\nColumns: id, name, revenue",
-    "session_id": "optional-session-id"
-  }'
-```
-
-**Response:**
-```json
-{
-  "sql": "SELECT * FROM customers ORDER BY revenue DESC LIMIT 10",
-  "columns": ["id", "name", "revenue"],
-  "data": [
-    [1, "Acme Corp", 50000],
-    [2, "TechCo", 45000]
-  ],
-  "insights": [
-    {
-      "type": "trend",
-      "severity": "medium",
-      "message": "Top customer revenue increased 15% from last month"
-    }
-  ],
-  "session_id": "abc123..."
-}
-```
-
----
-
-#### POST /auth/query
-
-Execute query with user credentials (auth widget).
-
-**Request:**
-```bash
-curl -X POST http://localhost:8000/auth/query \
-  -H "Content-Type: application/json" \
-  -H "X-Session-ID: abc123..." \
-  -d '{
-    "question": "Show total sales today",
-    "schema": "Table: orders..."
-  }'
-```
-
-**Response:** Same as `/api/query`
-
----
-
-### Table Management
-
-#### GET /api/tables
-
-List available tables.
-
-**Request:**
-```bash
-curl http://localhost:8000/api/tables
-```
-
-**Response:**
-```json
-{
-  "tables": ["customers", "orders", "products", "sessions"]
-}
-```
-
----
-
-#### POST /api/schema
-
-Get schema for specific tables.
-
-**Request:**
-```bash
-curl -X POST http://localhost:8000/api/schema \
-  -H "Content-Type: application/json" \
-  -d '{
-    "tables": ["customers", "orders"]
-  }'
-```
-
-**Response:**
-```json
-{
-  "combined_schema": "Table: customers\nColumns: id (INT), name (VARCHAR), revenue (DECIMAL)\n\nTable: orders\nColumns: order_id (INT), customer_id (INT), amount (DECIMAL), order_date (DATE)"
-}
-```
-
----
-
-### Health Check
-
-#### GET /health
-
-System health status.
-
-**Request:**
-```bash
-curl http://localhost:8000/health
-```
-
-**Response:**
-```json
-{
-  "status": "healthy",
-  "version": "1.0.0",
-  "database": "connected",
-  "llm": "available",
-  "analytics": "enabled",
-  "scheduler": "running"
-}
-```
-
----
-
-## Auth Widget Endpoints
-
-### POST /auth/login
-
-Authenticate user and create session.
-
-**Request:**
-```json
-{
-  "username": "user@company.com",
-  "password": "password",
-  "database_type": "trino",
-  "host": "trino.company.com",
-  "port": 443,
-  "catalog": "hive",
-  "schema": "default"
-}
-```
-
-**Response:**
-```json
-{
-  "session_id": "abc123...",
-  "username": "user@company.com",
-  "expires_in": 28800
-}
-```
-
----
-
-### POST /auth/logout
-
-End user session.
-
-**Request:**
-```bash
-curl -X POST http://localhost:8000/auth/logout \
-  -H "X-Session-ID: abc123..."
-```
-
-**Response:**
-```json
-{
-  "message": "Logged out successfully"
-}
-```
-
----
-
-### GET /auth/tables
-
-List tables for authenticated user.
-
-**Request:**
-```bash
-curl http://localhost:8000/auth/tables \
-  -H "X-Session-ID: abc123..."
-```
-
-**Response:**
-```json
-{
-  "tables": ["orders", "customers"]
-}
-```
-
----
-
-## Schedule Endpoints
-
-### GET /api/schedules
-
-List all schedules.
-
-**Request:**
-```bash
-curl http://localhost:8000/api/schedules
-```
-
-**Response:**
-```json
-{
-  "schedules": [
-    {
-      "id": "schedule_1",
-      "name": "Daily Sales Report",
-      "question": "Show sales by product",
-      "cron": "0 9 * * *",
-      "next_run": "2025-02-12T09:00:00Z",
-      "enabled": true
-    }
-  ]
-}
-```
-
----
-
-### POST /api/schedules
-
-Create new schedule.
-
-**Request:**
-```json
-{
-  "name": "Weekly Revenue Report",
-  "question": "Show weekly revenue by region",
-  "tables": ["orders", "regions"],
-  "cron": "0 8 * * 1",
-  "email_recipients": ["team@company.com"],
-  "format": "excel"
-}
-```
-
-**Response:**
-```json
-{
-  "schedule_id": "schedule_2",
-  "message": "Schedule created successfully",
-  "next_run": "2025-02-17T08:00:00Z"
-}
-```
-
----
-
-### DELETE /api/schedules/{id}
-
-Delete schedule.
-
-**Request:**
-```bash
-curl -X DELETE http://localhost:8000/api/schedules/schedule_1
-```
-
-**Response:**
-```json
-{
-  "message": "Schedule deleted successfully"
-}
-```
-
----
-
-## Analytics Endpoints
-
-### GET /analytics/metrics
-
-Query performance metrics.
-
-**Request:**
-```bash
-curl http://localhost:8000/analytics/metrics
-```
-
-**Response:**
-```json
-{
-  "total_queries": 1250,
-  "avg_execution_time_ms": 145,
-  "success_rate": 0.95,
-  "queries_today": 87
-}
-```
-
----
-
-### GET /analytics/history
-
-Query history with filters.
-
-**Request:**
-```bash
-curl "http://localhost:8000/analytics/history?limit=10&success=true"
-```
-
-**Response:**
-```json
-{
-  "queries": [
-    {
-      "id": "query_123",
-      "question": "Show top customers",
-      "sql": "SELECT * FROM customers...",
-      "execution_time_ms": 120,
-      "success": true,
-      "created_at": "2025-02-11T14:30:00Z"
-    }
-  ],
-  "total": 1250
-}
-```
-
----
-
-## Admin Endpoints
-
-### POST /admin/reload
-
-Reload configuration without restart.
-
-**Request:**
-```bash
-curl -X POST http://localhost:8000/admin/reload
-```
-
-**Response:**
-```json
-{
-  "message": "Configuration reloaded successfully",
-  "changes": ["llm.temperature", "prompts.sql_generation"]
-}
-```
-
----
-
-### GET /admin/prompts
-
-Get all runtime prompts.
-
-**Request:**
-```bash
-curl http://localhost:8000/admin/prompts
-```
-
-**Response:**
-```json
-{
-  "prompts": {
-    "intent_detection": "Analyze user question...",
-    "sql_generation": "Generate SQL based on...",
-    "barista_personality": "You are SQLatte...",
-    "insights_generation": "Analyze results..."
-  }
-}
-```
-
----
-
-### PUT /admin/prompts/{type}
-
-Update specific prompt.
-
-**Request:**
-```bash
-curl -X PUT http://localhost:8000/admin/prompts/sql_generation \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "Custom SQL generation rules..."
-  }'
-```
-
-**Response:**
-```json
-{
-  "message": "Prompt updated successfully",
-  "type": "sql_generation"
-}
-```
-
----
-
-## Error Responses
-
-### Standard Error Format
-
-```json
-{
-  "error": "Error message",
-  "code": "ERROR_CODE",
-  "details": "Additional details"
-}
-```
-
----
-
-### Common Error Codes
-
-| Status | Code | Description |
-|--------|------|-------------|
-| 400 | INVALID_REQUEST | Missing or invalid parameters |
-| 401 | UNAUTHORIZED | Session expired or invalid |
-| 404 | NOT_FOUND | Resource not found |
-| 429 | RATE_LIMIT | Too many requests |
-| 500 | INTERNAL_ERROR | Server error |
-
----
-
-## Rate Limiting
-
-**Limits:**
-- 100 requests/minute per IP
-- 1000 requests/hour per session
-
-**Headers:**
-```
-X-RateLimit-Limit: 100
-X-RateLimit-Remaining: 95
-X-RateLimit-Reset: 1644591600
-```
-
----
-
-## Examples
-
-### Complete Workflow
-
-**1. Get tables:**
-```bash
-curl http://localhost:8000/api/tables
-```
-
-**2. Get schema:**
-```bash
-curl -X POST http://localhost:8000/api/schema \
-  -H "Content-Type: application/json" \
-  -d '{"tables": ["orders"]}'
-```
-
-**3. Execute query:**
-```bash
-curl -X POST http://localhost:8000/api/query \
-  -H "Content-Type: application/json" \
-  -d '{
-    "question": "Show total sales today",
-    "schema": "Table: orders..."
-  }'
-```
-
----
-
-### With Authentication
-
-**1. Login:**
-```bash
-SESSION=$(curl -X POST http://localhost:8000/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{
-    "username": "user@company.com",
-    "password": "password",
-    "database_type": "trino",
-    "host": "trino.company.com"
-  }' | jq -r '.session_id')
-```
-
-**2. Query with session:**
-```bash
-curl -X POST http://localhost:8000/auth/query \
-  -H "Content-Type: application/json" \
-  -H "X-Session-ID: $SESSION" \
-  -d '{
-    "question": "Show my orders"
-  }'
-```
-
-**3. Logout:**
-```bash
-curl -X POST http://localhost:8000/auth/logout \
-  -H "X-Session-ID: $SESSION"
-```
-
----
-
-**Next:** [WebSocket API](websocket.md) 
+Auto-generated interactive docs are always available at `/docs` (Swagger) on a running instance — this page is a grouped reference of what exists and why. All endpoints are relative to your configured `app.host:app.port`.
+
+## Core Query (unauthenticated / default widget)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/query` | POST | Main NL→SQL query endpoint. Requires `X-Session-ID` if `query.require_session: true` |
+| `/tables` | GET | List tables in the configured database |
+| `/schema/{table_name}` | GET | Column definitions for a table |
+| `/schema/multiple` | POST | Column definitions for several tables at once |
+| `/history`, `/history/stats` | GET | Query history and stats |
+| `/history/{query_id}` | DELETE | Delete a history entry |
+| `/history/clear/{session_id}` | POST | Clear a session's history |
+| `/favorites` | GET / POST | List / save favorite queries |
+| `/favorites/{query_id}` | DELETE | Remove a favorite |
+| `/conversation/stats`, `/conversation/history/{session_id}` | GET | Conversation memory inspection |
+| `/conversation/clear/{session_id}`, `/conversation/cleanup` | POST | Reset conversation state |
+| `/conversation/{session_id}` | DELETE | Delete a conversation |
+| `/health`, `/config`, `/ui-config` | GET | Health check, effective config, UI section visibility |
+| `/reload-providers` | POST | Reload DB/LLM providers without a full restart |
+
+## Auth Widget & MCP (`/auth/*`)
+
+Used by the auth widget, and by the MCP server under the hood. See [MCP Overview](../mcp/overview.md) and [Security Overview](../security/overview.md).
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/auth/login` | POST | Per-user login with DB credentials → session ID |
+| `/auth/logout`, `/auth/validate` | POST | End / check a session |
+| `/auth/session-info`, `/auth/stats`, `/auth/user-stats` | GET | Session and usage introspection |
+| `/auth/config` | GET | Auth plugin config (non-secret) |
+| `/auth/tables`, `/auth/schema/{table_name}`, `/auth/schema/multiple` | GET/POST | Scoped schema access |
+| `/auth/query` | POST | Governed query endpoint — what MCP tools call, with `bypass_intent` support |
+| `/auth/mcp-mask-rules` | GET | Active field-masking rules for the caller |
+| `/auth/conversation/history`, `/auth/conversation/clear` | GET/POST | Per-session conversation memory |
+| `/auth/token/generate` \| `/validate` \| `/revoke` | POST | [API token lifecycle](../security/tokens.md) |
+| `/auth/tokens` | GET | List the caller's own tokens |
+| `/auth/auto-session` | POST | Server-credential-backed session for unauthenticated widgets (if `auto_session.enabled`) |
+
+## MCP Server
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/mcp/sse` | GET | SSE connection for network MCP clients (requires `x-mcp-token`) |
+| `/mcp/messages/` | POST | MCP protocol message channel |
+
+Only mounted when `mcp.sse.enabled: true`. See [Network Setup](../mcp/network-setup.md).
+
+## Admin (`/admin/*`, session-cookie gated)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/admin/login`, `/admin/login/json`, `/admin/logout` | GET/POST | Admin authentication |
+| `/admin/config` | GET/POST | Full effective config |
+| `/admin/config/{llm,database,email,scheduler,insights,ops-agent,export}` | PUT | Section-scoped config updates |
+| `/admin/config/reset`, `/admin/config/history` | POST/GET | Reset to defaults / view change history |
+| `/admin/config/snapshot`, `/admin/config/restore` | POST | Backup and restore config |
+| `/admin/test`, `/admin/test/email` | POST | Connection tests (DB/LLM, SMTP) |
+| `/admin/reload`, `/admin/info` | POST/GET | Reload providers, instance info |
+| `/admin/prompts`, `/admin/prompts/update`, `/admin/prompts/reset` | GET/POST | [Runtime prompt editing](../features/runtime-prompts.md) |
+| `/admin/tokens`, `/admin/token/revoke`, `/admin/token-policy`, `/admin/token/set-limit` | GET/POST | Platform-wide [token management](../security/tokens.md) |
+| `/admin/mcp-mask-rules` | GET/POST/PUT/DELETE | [Field masking rules](../mcp/field-masking.md) |
+
+## Dashboards (`/api/dashboards`)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/api/dashboards` | GET | List all |
+| `/api/dashboards/stats` | GET | Count + storage backend |
+| `/api/dashboards/{id}` | GET / DELETE | Fetch / remove |
+| `/api/dashboards/generate` | POST | Create from a favorite query |
+| `/api/dashboards/{id}/refresh` | POST | Re-run and update |
+
+See [Dashboard](../features/dashboard.md).
+
+## Scheduled Queries (`/api/schedules`)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/api/schedules` | POST / GET | Create / list |
+| `/api/schedules/{id}` | GET / PUT / DELETE | Fetch, update, remove |
+| `/api/schedules/{id}/toggle` | POST | Enable/disable |
+| `/api/schedules/{id}/run` | POST | Run immediately |
+| `/api/schedules/{id}/executions`, `/stats` | GET | History and stats |
+| `/api/schedules/admin/all`, `/admin/jobs` | GET | Cross-user view (admin) |
+
+See [Scheduled Queries](../features/schedules.md).
+
+## Semantic Layer (`/api/semantic`)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/api/semantic/entities` | GET/POST | List / create entities |
+| `/api/semantic/entities/{id}` | GET/PUT/DELETE | Manage one entity |
+| `/api/semantic/entities/{id}/columns`, `/columns` | GET/POST | Column display names |
+| `/api/semantic/relationships` | GET/POST | JOIN relationships |
+| `/api/semantic/metrics` | GET/POST | Calculated metrics |
+| `/api/semantic/context` | GET | Assembled context as sent to the LLM |
+| `/api/semantic/discover` | POST | Auto-discovery scan |
+
+See [Semantic Layer](../features/semantic-layer.md).
+
+## BigQuery Ops Console (`/ops-agent`)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/ops-agent/operations` | GET | List available operations |
+| `/ops-agent/projects`, `/switch-project` | GET/POST | Multi-project management |
+| `/ops-agent/execute` | POST | Run an operation |
+| `/ops-agent/health` | GET | Health check |
+| `/ops-agent/alarms` | GET/POST | List / create cost alarms |
+| `/ops-agent/alarms/{id}` | PUT/DELETE | Update / remove an alarm |
+| `/ops-agent/alarms/{id}/test` | POST | Run condition check on-demand |
+| `/ops-agent/alarms/{id}/history`, `/history/all` | GET | Trigger history |
+| `/ops-agent/alarms/jira-config`, `/jira-issue-types` | GET | Jira integration status |
+
+See [BigQuery Ops Console](../features/ops-console.md).
+
+## Audit Logs (`/api/audit`)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/api/audit/logs` | GET | Filtered log entries |
+| `/api/audit/summary`, `/daily-trend`, `/top-users` | GET | Aggregate views |
+| `/api/audit/export/csv` | GET | CSV export |
+
+See [Audit Logs](../features/audit-logs.md).
+
+## Usage Analytics (`/api/analytics`)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/api/analytics/summary`, `/hourly-stats`, `/errors` | GET | Usage overview |
+| `/api/analytics/widget-comparison` | GET | Standard vs. auth widget traffic |
+| `/api/analytics/performance`, `/query-complexity` | GET | Execution time and complexity distributions |
+| `/api/analytics/top-users` | GET | Highest-volume users |
+| `/api/analytics/health` | GET | Health check |
+
+See [Analytics & Insights](../features/analytics.md).
+
+## Demo (`/demo`)
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `/demo`, `/demo/fullscreen`, `/demo/standard`, `/demo/comparison` | GET | Widget embed previews |
+| `/demo/health` | GET | Health check |
