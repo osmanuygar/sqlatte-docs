@@ -1,42 +1,25 @@
 # Database Providers
 
-SQLatte supports four database providers. Configure one in `config.yaml`:
-
-```yaml
-database:
-  provider: "postgresql"  # trino, postgresql, mysql, bigquery
-```
-
----
+SQLatte supports four database providers, selected via `database.provider`. Only the block for the selected provider needs to be filled in.
 
 ## Trino
 
-**Best for:** Distributed data lakes (Hive, Iceberg, Delta Lake)
+Distributed SQL engine over Hive, Iceberg, Delta Lake, and other catalogs.
 
 ```yaml
 database:
   provider: "trino"
   trino:
-    host: "trino.company.com"
+    host: "trino.example.com"
     port: 443
     user: "username"
-    password: "password"         # Optional
-    catalog: "hive"              # hive, iceberg, delta, etc.
+    password: "password"
+    catalog: "hive"
     schema: "default"
-    http_scheme: "https"         # http or https
-    verify_ssl: true
+    http_scheme: "https"
 ```
 
-**Tips:**
-- Use fully qualified table names: `catalog.schema.table`
-- Optimize with partition filters: `WHERE dt >= '20251201'`
-- Enable HTTPS in production
-
----
-
 ## PostgreSQL
-
-**Best for:** Relational databases, OLTP workloads
 
 ```yaml
 database:
@@ -44,32 +27,17 @@ database:
   postgresql:
     host: "localhost"
     port: 5432
-    database: "mydb"
+    database: "analytics"
     user: "postgres"
     password: "password"
-    schema: "public"             # Default schema
-    pool_size: 5                 # Connection pool
-    max_overflow: 10             # Extra connections
+    schema: "public"
+    min_connections: 1
+    max_connections: 10
 ```
 
-**Connection String Alternative:**
-```yaml
-database:
-  provider: "postgresql"
-  postgresql:
-    connection_string: "postgresql://user:pass@host:5432/db"
-```
-
-**Tips:**
-- Use connection pooling for performance
-- Set appropriate `pool_size` for concurrent users
-- Use schemas to organize tables
-
----
+`min_connections`/`max_connections` size the connection pool.
 
 ## MySQL
-
-**Best for:** Web applications, MySQL workloads
 
 ```yaml
 database:
@@ -77,21 +45,13 @@ database:
   mysql:
     host: "localhost"
     port: 3306
-    database: "mydb"
+    database: "analytics"
     user: "root"
     password: "password"
-    charset: "utf8mb4"           # UTF-8 support
+    autocommit: true
 ```
 
-**Tips:**
-- Use `utf8mb4` for full Unicode support
-- Enable SSL for production: `ssl_ca`, `ssl_cert`, `ssl_key`
-
----
-
-## Google BigQuery
-
-**Best for:** Cloud data warehouse, analytics at scale
+## BigQuery
 
 ```yaml
 database:
@@ -99,129 +59,22 @@ database:
   bigquery:
     project_id: "my-gcp-project"
     dataset: "analytics"
+    location: "US"
     credentials_path: "/path/to/service-account.json"
-    location: "US"               # US, EU, asia-northeast1, etc.
+    # or inline for containers: credentials_json: '{"type": "service_account", ...}'
+    timeout: 300
+    max_results: 10000
 ```
 
-### Service Account Setup
+Requires a service account with `BigQuery Data Viewer` and `BigQuery Job User` roles at minimum. This is a separate credential path from `ops_agent.config.projects[].credentials_path`, which powers the [BigQuery Ops Console](../features/ops-console.md) — the two can point at different service accounts with different permission scopes if you want query access and ops/cost-analysis access separated.
 
-1. **Create Service Account:**
-   ```bash
-   # In GCP Console → IAM & Admin → Service Accounts
-   # Click "Create Service Account"
-   ```
+## Multi-Tenant Overrides
 
-2. **Grant Permissions:**
-   - `BigQuery Data Viewer` - Read data
-   - `BigQuery Job User` - Execute queries
+If `plugins.auth` is enabled, each authenticated user connects with their own credentials passed at login time rather than the server's static `database` block — see [Security Overview](../security/overview.md#multi-tenant-auth-plugin). The top-level `database` config still applies to the default (unauthenticated) chat UI and widget.
 
-3. **Download JSON Key:**
-   ```bash
-   # Click on service account → Keys → Add Key → JSON
-   # Save to: /path/to/service-account.json
-   ```
-
-4. **Update Config:**
-   ```yaml
-   credentials_path: "/path/to/service-account.json"
-   ```
-
-**Tips:**
-- Use backticks for table names: `` `project.dataset.table` ``
-- Leverage partitioning: `WHERE _PARTITIONTIME >= '2025-01-01'`
-- Monitor costs with query limits
-
----
-
-## Testing Connection
-
-Test your database connection:
-
-```bash
-# Via SQLatte
-curl http://localhost:8000/health
-
-# Via Admin Panel
-http://localhost:8000/admin
-# → Providers tab → Test Connection button
-```
-
----
-
-## Switching Providers
-
-Change provider without code changes:
-
-1. Edit `config.yaml`
-2. Update `database.provider`
-3. Add provider-specific config
-4. Restart SQLatte (or use admin panel reload)
-
-**Example - Trino to PostgreSQL:**
-```yaml
-# Before
-database:
-  provider: "trino"
-  trino: {...}
-
-# After
-database:
-  provider: "postgresql"
-  postgresql: {...}
-```
-
----
-
-## Performance Tips
-
-### Trino
-- Use partition pruning: `WHERE dt >= '20251201'`
-- Prefer `approx_distinct()` over `COUNT(DISTINCT)`
-- Use `LIMIT` to control result size
-
-### PostgreSQL
-- Create indexes on frequently queried columns
-- Use `EXPLAIN ANALYZE` for query optimization
-- Increase `pool_size` for concurrent users
-
-### MySQL
-- Use `LIMIT` in queries
-- Index foreign key columns
-- Enable query cache if applicable
-
-### BigQuery
-- Use clustering and partitioning
-- Avoid `SELECT *` on large tables
-- Use `APPROX_COUNT_DISTINCT` for large cardinality
-
----
-
-## Troubleshooting
-
-### Connection Refused
-```bash
-# Check host and port
-ping your-db-host
-telnet your-db-host 5432
-
-# Check firewall rules
-# Check database is running
-```
-
-### Authentication Failed
-```bash
-# Verify credentials
-# Check user has necessary permissions
-# Check password special characters (escape in YAML)
-```
-
-### Timeout Errors
-```bash
-# Increase timeout in config
-# Check network latency
-# Optimize slow queries
-```
-
----
-
-**Next:** [LLM Providers](llm-providers.md) | [Full Config Reference](config-yaml.md)
+| Database | Status | Required fields |
+|---|---|---|
+| Trino | Stable | host, port, catalog, schema |
+| PostgreSQL | Stable | host, port, database, schema |
+| MySQL | Stable | host, port, database |
+| BigQuery | Stable | project_id, credentials |

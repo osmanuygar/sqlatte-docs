@@ -1,6 +1,6 @@
 site_name: SQLatte Documentation
 site_url: https://osmanuygar.github.io/sqlatte-docs/
-site_description: Natural Language to SQL Analytics Platform
+site_description: The Governed Data Layer for AI Agents and Analysts
 site_author: Osmanuygar
 
 repo_name: osmanuygar/sqlatte
@@ -79,6 +79,12 @@ nav:
     - Quick Start: getting-started/quickstart.md
     - Docker Deployment: getting-started/docker.md
 
+  - MCP (AI Agents):
+    - Overview: mcp/overview.md
+    - Local Setup (stdio): mcp/local-setup.md
+    - Network Setup (SSE): mcp/network-setup.md
+    - Field Masking: mcp/field-masking.md
+
   - Configuration:
     - Overview: configuration/overview.md
     - Full Config Reference: configuration/config-yaml.md
@@ -88,9 +94,6 @@ nav:
     - Dashboard Customization: configuration/dashboard.md
     - Email Settings: configuration/email.md
 
-  - User Interface:
-    - UI Guide & Screenshots: ui-guide.md
-
   - Features:
     - Dashboard: features/dashboard.md
     - Scheduled Queries: features/schedules.md
@@ -98,11 +101,18 @@ nav:
     - Semantic Layer: features/semantic-layer.md
     - Runtime Prompts: features/runtime-prompts.md
     - Barista Personality: features/barista.md
+    - BigQuery Ops Console: features/ops-console.md
+    - Audit Logs: features/audit-logs.md
+
+  - Security:
+    - Overview: security/overview.md
+    - API Tokens & Admin Auth: security/tokens.md
+
+  - User Interface:
+    - UI Guide: ui-guide.md
 
   - API Reference:
     - REST Endpoints: api/endpoints.md
-    - WebSocket API: api/websocket.md
-
 
   - Architecture:
     - System Overview: architecture/overview.md
