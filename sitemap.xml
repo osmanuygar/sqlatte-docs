@@ -2,90 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/ui-guide/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/api/endpoints/</loc>
-         <lastmod>2026-03-16</lastmod>
-    </url>
-    <url>
-         <loc>https://osmanuygar.github.io/sqlatte-docs/api/websocket/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/architecture/overview/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/architecture/principles/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/configuration/analytics/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/configuration/config-yaml/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/configuration/dashboard/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/configuration/database-providers/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/configuration/email/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/configuration/llm-providers/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/configuration/overview/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/features/analytics/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://osmanuygar.github.io/sqlatte-docs/features/audit-logs/</loc>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/features/barista/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/features/dashboard/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://osmanuygar.github.io/sqlatte-docs/features/ops-console/</loc>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/features/runtime-prompts/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/features/schedules/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/features/semantic-layer/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/getting-started/docker/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/getting-started/installation/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
     </url>
     <url>
          <loc>https://osmanuygar.github.io/sqlatte-docs/getting-started/quickstart/</loc>
-         <lastmod>2026-03-16</lastmod>
+         <lastmod>2026-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://osmanuygar.github.io/sqlatte-docs/mcp/field-masking/</loc>
+         <lastmod>2026-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://osmanuygar.github.io/sqlatte-docs/mcp/local-setup/</loc>
+         <lastmod>2026-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://osmanuygar.github.io/sqlatte-docs/mcp/network-setup/</loc>
+         <lastmod>2026-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://osmanuygar.github.io/sqlatte-docs/mcp/overview/</loc>
+         <lastmod>2026-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://osmanuygar.github.io/sqlatte-docs/security/overview/</loc>
+         <lastmod>2026-07-09</lastmod>
+    </url>
+    <url>
+         <loc>https://osmanuygar.github.io/sqlatte-docs/security/tokens/</loc>
+         <lastmod>2026-07-09</lastmod>
     </url>
 </urlset>
